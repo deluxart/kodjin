@@ -1,0 +1,282 @@
+.wpcf7 {
+  &-form {
+    .fields {
+      input, textarea {
+        &:not([type="submit"]) {
+          border: 0;
+          padding: 12px 0;
+          border-bottom: 2px solid $dark;
+          font-size: 16px;
+          color: $dark;
+          font-weight: 500;
+          width: 100%;
+          border-radius: 0;
+          -webkit-appearance: none;
+
+          &::placeholder {
+            opacity: 0.5;
+            color: $black;
+          }
+        }
+
+        &.wpcf7-not-valid {
+          &:not([type="submit"]) {
+            border-bottom: 2px solid #EC463B;
+          }
+        }
+      }
+
+      label {
+        position: relative;
+
+        .label-title {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          transition: 0.2s all;
+          opacity: 0.5;
+          color: $black;
+          font-weight: 500;
+          font-size: 16px;
+          z-index: 1;
+        }
+
+        &.active {
+          .label-title {
+            font-size: 12px;
+            top: 0;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .check {
+      margin-top: 32px;
+
+      .wpcf7-list-item-label {
+        font-size: 16px;
+        padding-left: 11px;
+
+        &:before {
+          content: ''
+        }
+      }
+
+      input {
+        &[type=checkbox] {
+          appearance: none;
+          -webkit-appearance: none;
+          position: relative;
+          display: inline-block;
+          width: 2.4em;
+          height: 1.4em;
+          margin: -.2em 0;
+          box-sizing: content-box;
+          padding: 0;
+          border: none;
+          border-radius: .7em;
+          background: #D3D3D3;
+          transition: background-color 250ms ease, box-shadow 250ms ease;
+          font-size: 100%;
+          text-size-adjust: 100%;
+          -webkit-text-size-adjust: 100%;
+          user-select: none;
+          outline: none;
+          top: 3px;
+
+          &::before {
+            content: '';
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            position: absolute;
+            width: 1em;
+            height: 1em;
+            left: 0;
+            top: 0;
+            background: $white;
+            border-radius: 50%;
+            transform: translate(20%, 20%);
+            transition: transform 250ms ease;
+            color: rgba(0,0,0,0.3);
+            line-height: 1;
+          }
+
+          &:checked {
+            background-color: $orange;
+
+            &::before {
+              transform: translate(120%, 20%);
+            }
+          }
+
+          &:indeterminate::before {
+            transform: translate(70%, 20%);
+            content: '-';
+          }
+
+          &:disabled:before {
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+
+    .policy {
+      margin-top: 18px;
+      font-size: 14px;
+      color: $black;
+      opacity: 0.4;
+
+      a {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  form {
+    .wpcf7 {
+      &-not-valid-tip {
+        font-size: 12px;
+        font-weight: 600;
+        position: absolute;
+      }
+
+      &-response-output {
+        font-size: 16px;
+        margin: 30px 0 0;
+        padding: 20px;
+        border-radius: 10px;
+
+        @media (max-width: $tb_bp) {
+          font-size: 14px;
+        }
+      }
+
+      &-spinner {
+        top: 5px;
+        margin: 0 0 0 15px;
+      }
+
+      &-list-item {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.contactForm {
+  .head {
+    max-width: 600px;
+    margin-bottom: 44px;
+
+    @media (max-width: $tb_bp) {
+      margin-bottom: 30px;
+      padding-right: 30px;
+    }
+
+    h2 {
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-family: Arial, serif;
+      line-height: 130%;
+    }
+  }
+
+  .successForm {
+    display: none;
+
+    h2 {
+      margin-bottom: 24px;
+      max-width: 600px;
+    }
+
+    p {
+      margin-bottom: 49px;
+    }
+  }
+
+  .fields {
+    display: grid;
+    grid-gap: 20px;
+
+    @media (min-width: $tb_bp) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 32px 64px;
+    }
+  }
+
+  input {
+    &[type="submit"] {
+      margin-top: 40px;
+
+      @media (min-width: $tb_bp) {
+        margin-top: 56px;
+      }
+    }
+  }
+
+  &.request_demo {
+    padding: 36px;
+
+    @media (min-width: $tb_bp) {
+      padding: 60px;
+    }
+
+    @media (min-width: $bdt_bp) {
+      padding: 110px;
+    }
+  }
+
+  &.white_paper {
+    padding: 36px;
+
+    @media (min-width: $tb_bp) {
+      padding: 50px;
+    }
+
+    @media (min-width: $bdt_bp) {
+      padding: 77px;
+    }
+
+    .fields {
+      grid-template-columns: 1fr;
+    }
+
+    .wrapForm {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+
+      .image {
+        display: none;
+      }
+
+      @media (min-width: $tb_bp) {
+        min-width: 892px;
+        grid-template-columns: auto 1fr;
+        gap: 50px;
+
+        .image {
+          display: block;
+        }
+      }
+
+      @media (min-width: $dt_bp) {
+        min-width: 1006px;
+        gap: 60px;
+      }
+
+      @media (min-width: $bdt_bp) {
+        min-width: 1042px;
+        gap: 81px;
+      }
+    }
+  }
+}

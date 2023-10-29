@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: 'Montserrat', serif;
+}
+
+body {
+  font-size: 16px;
+  line-height: 120.7%;
+  font-weight: 400;
+  color: #000;
+
+  @media (min-width: $tb_bp) {
+    font-size: 18px;
+  }
+}
+
+button, input, textarea {
+  outline: none;
+  font-family: inherit;
+}
+:focus {
+  outline: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, video {
+  display: block; }
+
+#page {
+  position: relative;
+  overflow: hidden;
+}
+
+#primary {
+  padding: 140px 0 72px 0;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: 1330px) {
+    max-width: 1312px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &.read_more {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $black;
+
+    @media (max-width: $tb_bp) {
+      font-size: 14px;
+    }
+  }
+}
+
+strong {
+  font-weight: 600;
+}
+
+.tc {
+  text-align: center;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+ul {
+  &.petal {
+    display: grid;
+    grid-gap: 20px;
+
+    li {
+      position: relative;
+      padding-left: 40px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 24px;
+        //background: url('../images/icon_petal.svg') center / contain no-repeat;
+        left: 0;
+      }
+    }
+  }
+}
+
+
+.eocjs-newsticker {
+  padding: 14px 0;
+  background: rgba(255, 105, 0, 0.80);
+  color: $black;
+  position: absolute;
+
+  &:before {
+    content: '';
+    width: 220px;
+    height: 100%;
+    right: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(272deg, #FFF 0%, #D85A02 0.01%, rgba(216, 90, 2, 0.00) 100%);
+    pointer-events: none;
+
+    @media (max-width: $tb_bp) {
+      width: 120px;
+    }
+  }
+
+  .eocjs-newsticker-container {
+    position: relative;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  .close {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.eocjs-newsticker .eocjs-newsticker-one,
+.eocjs-newsticker .eocjs-newsticker-two {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 24px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.eocjs-newsticker-loader {
+  position: absolute;
+  left: calc(50% - 10px);
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border: 3px solid #555555;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: eocjs-newsticker-spin .75s linear infinite;
+}
+
+@keyframes eocjs-newsticker-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes eocjs-newsticker-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.entry-content {
+  & > p, & > ul, & > ol, & > div, & > blockquote, & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > figure {
+    margin-bottom: 21px;
+  }
+}
+
+.agree, .agreesubscribe { display: none; }
+.wp-block-code { padding: 20px; }
+.wp-block-table.is-style-stripes td { padding: 7px; }
+.wp-block-code { max-height: 300px; overflow: auto; }
+
+.list_categories {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  li {
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 20px;
+      border-radius: 30px;
+
+      &:hover {
+        background: #F9F9F9;
+      }
+    }
+
+    &.current-cat {
+      a {
+        background: $lightGray;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 12px;
+  font-size: 16px;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .separator {
+      width: 5px;
+      height: 8px;
+      background-image: url("data:image/svg+xml,%3Csvg width='5' height='8' viewBox='0 0 5 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7L4 4L1 1' stroke='black'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    > span {
+      > span {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.paginationWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wp-pagenavi {
+    margin-bottom: 80px;
+
+    > span, > a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-width: 32px;
+      height: 32px;
+      font-size: 16px;
+      font-weight: 600;
+      border: 0;
+
+      &.page {
+        &:hover {
+          background: $lightGray;
+          border-radius: 50%;
+        }
+      }
+
+      &.current {
+        border-radius: 50%;
+        color: #fff;
+        background: $black;
+      }
+    }
+  }
+}
+
+.entry-content {
+  & > p, & > ul, & > ol, & > div, & > blockquote, & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > figure {
+    margin-bottom: 21px;
+    line-height: 135%;
+  }
+}

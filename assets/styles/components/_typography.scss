@@ -1,0 +1,74 @@
+h1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 106%;
+
+  @media (max-width: $dt_bp) {
+    font-size: 64px;
+  }
+
+  @media (max-width: $tb_bp) {
+    font-size: 56px;
+  }
+
+  @media (max-width: $sp_bp) {
+    font-size: 42px;
+  }
+}
+
+.page-head h1, .wrapForm h1, h2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 106%;
+
+  @media (max-width: $dt_bp) {
+    font-size: 42px;
+  }
+
+  @media (max-width: $tb_bp) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $sp_bp) {
+    font-size: 32px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 125%;
+
+  @media (max-width: $dt_bp) {
+    font-size: 28px;
+  }
+
+  @media (max-width: $tb_bp) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $sp_bp) {
+    font-size: 20px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+
+  @media (max-width: $tb_bp) {
+    font-size: 21px;
+  }
+
+  @media (max-width: $sp_bp) {
+    font-size: 18px;
+  }
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 110%;
+  text-transform: uppercase;
+}

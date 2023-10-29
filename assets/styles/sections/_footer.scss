@@ -1,0 +1,174 @@
+#footer {
+  padding: 97px 0 82px;
+  background-color: $dark;
+  color: $white;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: $tb_bp) {
+    padding: 72px 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(32.11% 43.46% at 42.87% 59.83%, rgba(255, 105, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: blur(50px);
+    border-radius: 50%;
+    left: 56%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .copyright {
+    max-width: 537px;
+    font-size: 12px;
+    line-height: 14.63px;
+    margin-top: 32px;
+    opacity: 0.7;
+  }
+
+  #contact_us {
+    background: $white;
+    color: $dark;
+    padding: 74px 114px;
+    border-radius: 24px;
+    margin-bottom: 73px;
+
+    @media (max-width: $dt_bp) {
+      padding: 62px 90px;
+    }
+
+    @media (max-width: $tb_bp) {
+      padding: 52px 70px;
+    }
+
+    @media (max-width: $sp_bp) {
+      padding: 36px;
+      border-radius: 20px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: $dt_bp) {
+      flex-direction: row;
+    }
+
+    .leftSide {
+      min-width: 205px;
+
+      .logo {
+        margin-bottom: 60px;
+
+        @media (max-width: $sp_bp) {
+          margin-bottom: 40px;
+        }
+      }
+
+      .socials {
+        @media (max-width: $tb_bp) {
+          margin-bottom: 20px;
+        }
+
+        h5 {
+          margin-bottom: 16px;
+        }
+
+        ul {
+          display: flex;
+          gap: 20px;
+
+          li {
+            display: flex;
+            align-items: center;
+
+            a {
+              opacity: 0.7;
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .widgets {
+      display: grid;
+      gap: 30px;
+
+      @media (min-width: $dt_bp) {
+        gap: 16px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .widget {
+        max-width: 205px;
+
+        @media (max-width: $sp_bp) {
+          max-width: 100%;
+        }
+
+        > h5 {
+          margin-bottom: 16px;
+        }
+
+        .textwidget {
+          display: grid;
+          gap: 20px;
+        }
+
+        ul {
+          display: grid;
+          gap: 5px;
+
+          @media (min-width: $sp_bp) {
+            gap: 8px;
+          }
+
+          li {
+            > a {
+              opacity: 0.6;
+              font-size: 14px;
+              font-weight: 400;
+
+              @media (min-width: $sp_bp) {
+                font-size: 16px;
+              }
+
+              @media (min-width: $tb_bp) {
+                font-size: 18px;
+              }
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+
+            > h5 {
+              padding: 5px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

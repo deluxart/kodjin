@@ -1,0 +1,174 @@
+.whitepaper-single {
+  padding: 164px 0 65px;
+
+  .content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 38px;
+    padding-top: 28px;
+    padding-bottom: 108px;
+
+    @media (max-width: $dt_bp) {
+      padding-bottom: 50px;
+      grid-template-columns: 1fr;
+    }
+
+    .image_btn {
+      .image {
+        margin-bottom: 35px;
+
+        img {
+          width: 100%;
+          max-width: 404px;
+        }
+      }
+
+      a {
+        &.btn {
+          display: inline-flex;
+          gap: 10px;
+        }
+      }
+    }
+
+    .details {
+      h2 {
+        margin-bottom: 16px;
+      }
+
+      .date {
+        margin-bottom: 40px;
+      }
+
+      .post-text {
+        display: grid;
+        gap: 24px;
+        line-height: 135%;
+      }
+    }
+  }
+
+  .contactForm {
+    border-radius: 12px;
+    background: $lightGray;
+
+    @media (min-width: $tb_bp) {
+      padding: 72px;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .wpcf7-form {
+      .fields {
+        input:not([type="submit"]) {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+.other_whitepapers {
+  padding-top: 108px;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  .card {
+    border-radius: 24px;
+    background: $lightGray;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+
+    @media (max-width: 1340px) {
+      padding: 30px;
+      grid-template-columns: 120px 1fr;
+    }
+
+    .image {
+      img {
+        width: 160px;
+        height: auto;
+
+        @media (max-width: 1340px) {
+          width: 120px;
+        }
+      }
+    }
+
+    h4 {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    ul {
+      li {
+        background: #FFF;
+      }
+    }
+  }
+}
+
+.whitepapers-archive {
+  padding: 164px 0 65px;
+
+  .page-head {
+    h2 {
+      margin-top: 12px;
+      margin-bottom: 43px;
+    }
+  }
+
+  .whitepapers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 70px 127px;
+    padding-bottom: 130px;
+
+    @media (max-width: $tb_bp) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $sp_bp) {
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+    }
+
+    .card {
+      .image {
+        img {
+          width: 240px;
+          height: auto;
+          margin-bottom: 24px;
+
+          @media (max-width: 1340px) {
+            width: 160px;
+          }
+
+          @media (max-width: $sp_bp) {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      h4 {
+        max-width: 320px;
+      }
+
+      ul {
+        margin-top: 12px;
+      }
+    }
+  }
+}

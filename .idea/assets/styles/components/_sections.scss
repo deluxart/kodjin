@@ -1,0 +1,138 @@
+.reviewBlock {
+  padding: 72px;
+  border-radius: 24px;
+  background: $white;
+  color: $black;
+  display: grid;
+  gap: 32px;
+
+  @media (max-width: $dt_bp) {
+    padding: 62px;
+  }
+
+  @media (max-width: $tb_bp) {
+    padding: 52px;
+  }
+
+  @media (max-width: $sp_bp) {
+    padding: 36px;
+    border-radius: 20px;
+    gap: 24px;
+  }
+
+  .quoteIcon {
+    svg {
+      max-width: 53px;
+
+      @media (max-width: $sp_bp) {
+        max-width: 42px;
+      }
+    }
+  }
+
+  .text {
+    color: $black;
+    font-size: 32px;
+    line-height: 125%;
+
+    @media (max-width: $dt_bp) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $tb_bp) {
+      font-size: 21px;
+    }
+
+    @media (max-width: $sp_bp) {
+      line-height: 140%;
+      font-size: 16px;
+    }
+  }
+
+  .author {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 24px;
+
+    @media (max-width: $tb_bp) {
+      align-items: flex-start;
+    }
+
+    @media (max-width: $sp_bp) {
+      gap: 16px;
+    }
+
+    .photo {
+      img {
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        object-fit: cover;
+
+        @media (max-width: $dt_bp) {
+          width: 120px;
+          height: 120px;
+        }
+
+        @media (max-width: $tb_bp) {
+          width: 90px;
+          height: 90px;
+        }
+
+        @media (max-width: $sp_bp) {
+          width: 48px;
+          height: 48px;
+        }
+      }
+    }
+
+    h6 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 8px;
+
+      @media (max-width: $tb_bp) {
+        font-size: 21px;
+      }
+
+      @media (max-width: $sp_bp) {
+        font-size: 18px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 120%;
+      opacity: 0.6;
+
+      @media (max-width: $tb_bp) {
+        font-size: 16px;
+      }
+
+      @media (max-width: $sp_bp) {
+        font-size: 12px;
+      }
+    }
+
+    a {
+      margin-top: 12px;
+      opacity: 0.6;
+      display: inline-flex;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.dark {
+    background: $black;
+    color: $white;
+
+    .text {
+      color: $white;
+    }
+  }
+}

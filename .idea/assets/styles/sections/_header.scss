@@ -1,0 +1,124 @@
+#header {
+  position: absolute;
+  z-index: 3333333;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: 0.2s all;
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 32px;
+    height: 121px;
+
+    @media (max-width: $tb_bp) {
+      grid-template-columns: 1fr auto;
+      height: 90px;
+    }
+
+    .nav {
+      @media (min-width: $tb_bp) {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+      }
+    }
+
+    a {
+      &.btn {
+        font-weight: 500;
+        padding: 12px 16px;
+
+        @media (max-width: $tb_bp) {
+          display: none;
+        }
+      }
+    }
+
+    #primary-menu ul {
+      display: flex;
+      gap: 32px;
+      font-size: 16px;
+
+      a {
+        color: $black;
+      }
+    }
+  }
+
+  &.fixed {
+    position: fixed;
+    background: $white;
+    box-shadow: 0 0 20px #00000012;
+    color: $black;
+
+    .row {
+      height: 90px;
+    }
+
+    .logo {
+      color: $black;
+    }
+
+    #hamburger {
+      span {
+        background: $black;
+      }
+    }
+
+    &.is_admin {
+      top: 32px;
+
+      @media (max-width: 782px) {
+        top: 0;
+      }
+    }
+  }
+
+  &.transparent_on_top {
+    &:not(.fixed) {
+      color: $white;
+
+      .logo {
+        color: $white;
+      }
+
+      #hamburger {
+        span {
+          background: $white;
+        }
+      }
+
+      #primary-menu {
+        ul {
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &.active-nav {
+    &:not(.fixed) {
+      @media (max-width: $tb_bp) {
+        position: fixed;
+        background: $white;
+        box-shadow: 0 0 20px #00000012;
+        color: $black;
+
+        .logo {
+          color: $black;
+        }
+
+        #hamburger {
+          span {
+            background: $black;
+          }
+        }
+      }
+    }
+  }
+}

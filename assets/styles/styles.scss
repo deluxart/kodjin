@@ -1,0 +1,26 @@
+// COMPONENTS
+@import "components/variables";
+@import "components/reset";
+@import "components/buttons";
+@import "components/typography";
+@import "components/cf7";
+@import "components/cards";
+@import "components/sections";
+@import "components/spoiler";
+@import "components/navigation";
+@import "components/modal";
+@import "components/megamenu";
+
+// SECTIONS
+@import "sections/header";
+@import "sections/footer";
+
+// PAGES
+@import "pages/page";
+@import "pages/articles";
+@import "pages/home";
+@import "pages/solution";
+@import "pages/single-case";
+@import "pages/single-webinar";
+@import "pages/single-whitepaper";
+@import "pages/resources";
