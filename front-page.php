@@ -22,7 +22,7 @@ $section_bg_image = get_field( 'section_bg_image' );
             <?php if ( have_rows( 'news_ticker_head' ) ) : ?>
                 <?php while ( have_rows( 'news_ticker_head' ) ) : the_row(); ?>
                     <?php if ( get_sub_field( 'enable_news_ticker' ) == 1 ) : ?>
-                        <div id="newsTicker" data-name="news-ticker-upd">
+                        <div id="newsTicker" data-name="news-ticker-test">
                             <div class="ticker_desktop-content">
                                 <?php the_sub_field( 'ticker_content' ); ?>
                             </div>
