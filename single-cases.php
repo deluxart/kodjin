@@ -35,7 +35,7 @@ $cases = get_the_terms( get_the_ID(), 'casecat' );
                             }
                             echo '</ul>';
                         } ?>
-                        <h2><?php the_field( 'head_title' ); ?></h2>
+                        <h1><?php the_field( 'head_title' ); ?></h1>
                         <div class="text">
                             <?php the_field( 'head_description' ); ?>
                         </div>

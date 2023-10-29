@@ -197,6 +197,7 @@ function kodjin_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'kodjin_scripts' );
 
+
 /**
  * Implement the Custom Header feature.
  */
@@ -624,3 +625,13 @@ add_action( 'do_feed_atom_comments', 'wpcode_snippet_disable_feed', 1 );
 // Remove links to feed from the header.
 remove_action( 'wp_head', 'feed_links_extra', 3 );
 remove_action( 'wp_head', 'feed_links', 2 );
+
+function enqueue_custom_block_script() {
+    wp_enqueue_script(
+        'custom-block',
+        get_template_directory_uri() . '/assets/js/custom-blocks-guttenberg.js',
+        array('wp-blocks', 'wp-editor', 'wp-components')
+    );
+}
+
+add_action('enqueue_block_editor_assets', 'enqueue_custom_block_script');

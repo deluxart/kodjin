@@ -471,6 +471,14 @@
       grid-template-columns: 1fr 430px;
     }
 
+    .check_all_features {
+      padding: 0;
+
+      .block {
+        padding: 42px;
+      }
+    }
+
     .sidebar {
       display: flex;
       gap: 20px;
@@ -516,6 +524,10 @@
         display: grid;
         grid-template-columns: 132px 1fr;
         gap: 24px;
+
+        a {
+          text-decoration: none;
+        }
 
         h4 {
           font-size: 18px;

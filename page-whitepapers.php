@@ -18,10 +18,10 @@ get_header();
                         <?php if(function_exists('bcn_display')) { bcn_display(); } ?>
                     </div>
                 </div>
-                <h2 data-aos="fade-up"
+                <h1 data-aos="fade-up"
                     data-aos-easing="ease"
                     data-aos-duration="1000"
-                    data-aos-delay="200"><?php the_title(); ?></h2>
+                    data-aos-delay="200"><?php the_title(); ?></h1>
             </div>
             <?php
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;

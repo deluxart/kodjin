@@ -56,10 +56,10 @@ $post_slug = $post->post_name;
                     }
                     echo '</ul>';
                 } ?>
-                <h2 data-aos="fade-up"
+                <h1 data-aos="fade-up"
                     data-aos-easing="ease"
                     data-aos-duration="1000"
-                    data-aos-delay="300"><?php the_field( 'title_webinar' ); ?></h2>
+                    data-aos-delay="300"><?php the_field( 'title_webinar' ); ?></h1>
                 <?php if (get_field( 'description_webinar' )) { ?>
                     <div data-aos="fade-up"
                          data-aos-easing="ease"

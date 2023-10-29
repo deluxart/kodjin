@@ -54,7 +54,7 @@ $post_slug = $post->post_name;
                      data-aos-easing="ease"
                      data-aos-duration="1000"
                      data-aos-delay="200">
-                    <h2><?php the_field( 'title_whitepaper' ); ?></h2>
+                    <h1><?php the_field( 'title_whitepaper' ); ?></h1>
                     <div class="date"><?php echo get_the_date('F j, Y'); ?></div>
                     <div class="post-text">
                         <?php the_field( 'description_whitepaper' ); ?>

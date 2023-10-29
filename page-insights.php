@@ -92,12 +92,12 @@ $blog_id = get_option('page_for_posts', true);
                     </button>
                 </div>
             </div>
-            <section id="check_all_features" class="check_all_features">
+            <section id="check_all_features" class="check_all_features" style="cursor: pointer;" onclick="window.location.href = '<?php echo get_home_url(); ?>/whitepapers/the-ultimate-guide-to-fhir/'; return false;">
                 <div class="image">
                     <img data-aos="fade-left"
                          data-aos-easing="ease"
                          data-aos-duration="1000"
-                         data-aos-delay="200" src="<?php echo get_home_url(); ?>/wp-content/uploads/2023/07/fhir_img_articles.png" alt="" />
+                         data-aos-delay="200" src="<?php echo get_home_url(); ?>/wp-content/uploads/2023/07/fhir_img_articles.png" alt="fhir_img_articles" />
                 </div>
                 <div class="block" data-aos="fade-up"
                      data-aos-easing="ease"

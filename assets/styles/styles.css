@@ -799,23 +799,23 @@ h1 {
   }
 }
 
-.page-head h1, .wrapForm h1, h2 {
+.page-head h1, .wrapForm h1, .single-whitepapers h1, .webinars-archive h1, .single-cases h1, .webinar-single h1, .whitepapers-archive h1, h2 {
   font-size: 48px;
   font-weight: 600;
   line-height: 106%;
 }
 @media (max-width: 1200px) {
-  .page-head h1, .wrapForm h1, h2 {
+  .page-head h1, .wrapForm h1, .single-whitepapers h1, .webinars-archive h1, .single-cases h1, .webinar-single h1, .whitepapers-archive h1, h2 {
     font-size: 42px;
   }
 }
 @media (max-width: 992px) {
-  .page-head h1, .wrapForm h1, h2 {
+  .page-head h1, .wrapForm h1, .single-whitepapers h1, .webinars-archive h1, .single-cases h1, .webinar-single h1, .whitepapers-archive h1, h2 {
     font-size: 36px;
   }
 }
 @media (max-width: 768px) {
-  .page-head h1, .wrapForm h1, h2 {
+  .page-head h1, .wrapForm h1, .single-whitepapers h1, .webinars-archive h1, .single-cases h1, .webinar-single h1, .whitepapers-archive h1, h2 {
     font-size: 32px;
   }
 }
@@ -2905,6 +2905,12 @@ h5 {
     grid-template-columns: 1fr 430px;
   }
 }
+.type-post .post_wrap .check_all_features {
+  padding: 0;
+}
+.type-post .post_wrap .check_all_features .block {
+  padding: 42px;
+}
 .type-post .post_wrap .sidebar {
   display: flex;
   gap: 20px;
@@ -2942,6 +2948,9 @@ h5 {
   display: grid;
   grid-template-columns: 132px 1fr;
   gap: 24px;
+}
+.type-post .post_wrap .sidebar .whitepaper a {
+  text-decoration: none;
 }
 .type-post .post_wrap .sidebar .whitepaper h4 {
   font-size: 18px;
@@ -4533,7 +4542,7 @@ h5 {
     margin: 0 auto;
   }
 }
-.case-single #head .row .info h2 {
+.case-single #head .row .info h2, .case-single #head .row .info h1 {
   margin-bottom: 32px;
 }
 .case-single #head .row .info .tags {
@@ -4561,7 +4570,7 @@ h5 {
   display: grid;
   gap: 72px;
 }
-.case-single .content_block .sections h2 {
+.case-single .content_block .sections h2, .case-single .content_block .sections h1 {
   margin-bottom: 24px;
 }
 .case-single .content_block .sections .text_section .text {
@@ -4907,7 +4916,7 @@ h5 {
   display: inline-flex;
   gap: 10px;
 }
-.whitepaper-single .content .details h2 {
+.whitepaper-single .content .details h2, .whitepaper-single .content .details h1 {
   margin-bottom: 16px;
 }
 .whitepaper-single .content .details .date {

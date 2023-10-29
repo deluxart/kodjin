@@ -128,7 +128,7 @@ $section_bg_image = get_field( 'section_bg_image' );
                         <img data-aos="fade-left"
                              data-aos-easing="ease"
                              data-aos-duration="1000"
-                             data-aos-delay="200" src="<?php echo get_home_url(); ?>/wp-content/uploads/2023/07/fhir_img_articles.png" alt="" />
+                             data-aos-delay="200" src="<?php echo get_home_url(); ?>/wp-content/uploads/2023/07/fhir_img_articles.png" alt="fhir_img_articles" />
                     </div>
                     <div class="block" data-aos="fade-up"
                          data-aos-easing="ease"
@@ -272,10 +272,11 @@ $section_bg_image = get_field( 'section_bg_image' );
                 <div class="cards">
                     <?php if ( have_rows( 'cards_interoperability' ) ) : $int_card = 1; ?>
                         <?php while ( have_rows( 'cards_interoperability' ) ) : the_row(); $int_card++; ?>
+                            <?php $link = get_sub_field( 'link' ); ?>
                             <div data-aos="fade-up"
                                  data-aos-easing="ease"
                                  data-aos-duration="1000"
-                                 data-aos-delay="<?php echo $int_card; ?>00" class="card gray">
+                                 data-aos-delay="<?php echo $int_card; ?>00" class="card gray" onclick="window.location.href = '<?php echo esc_url( $link); ?>'; return false;">
                                 <div>
                                     <div class="cont">
                                         <h3><?php the_sub_field( 'title' ); ?></h3>
@@ -283,7 +284,6 @@ $section_bg_image = get_field( 'section_bg_image' );
                                             <?php the_sub_field( 'description' ); ?>
                                         </div>
                                     </div>
-                                    <?php $link = get_sub_field( 'link' ); ?>
                                     <?php if ( $link ) : ?>
                                         <a href="<?php echo esc_url( $link); ?>" class="read link">
                                             <svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -318,7 +318,7 @@ $section_bg_image = get_field( 'section_bg_image' );
                         <img data-aos="fade-left"
                              data-aos-easing="ease"
                              data-aos-duration="1000"
-                             data-aos-delay="200" src="<?php echo get_home_url(); ?>/wp-content/uploads/2023/07/fhir_img_articles.png" alt="" />
+                             data-aos-delay="200" src="<?php echo get_home_url(); ?>/wp-content/uploads/2023/07/fhir_img_articles.png" alt="fhir_img_articles" />
                     </div>
                     <div class="block" data-aos="fade-up"
                          data-aos-easing="ease"

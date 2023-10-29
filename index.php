@@ -120,7 +120,7 @@ $blog_id = get_option('page_for_posts', true);
                         data-aos-delay="500"><a href="<?php echo get_home_url(); ?>/news-events/">News and events</a></li>
                 </ul>
             </section>
-            <section id="check_all_features" class="check_all_features">
+            <section id="check_all_features" class="check_all_features" style="cursor: pointer;" onclick="window.location.href = '<?php echo get_home_url(); ?>/whitepapers/the-ultimate-guide-to-fhir/'; return false;">
                 <div class="image">
                     <img data-aos="fade-left"
                          data-aos-easing="ease"
