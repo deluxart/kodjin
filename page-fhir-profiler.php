@@ -198,7 +198,9 @@ $section_bg_image = get_field( 'section_bg_image' );
 			</div>
 		</section>
 
-		<section id="check_all_features" class="check_all_features profiler">
+        <?php if ( have_rows( 'actions_all_features' ) ) : ?><?php while ( have_rows( 'actions_all_features' ) ) : the_row(); ?><?php if ( have_rows( 'try_for_free' ) ) : ?><?php while ( have_rows( 'try_for_free' ) ) : the_row(); ?><?php the_sub_field( 'link' ); ?><?php endwhile; ?><?php endif; ?><?php endwhile; ?><?php endif; ?>
+
+		<section id="check_all_features" class="check_all_features profiler" style="cursor: pointer" onclick="window.location.href = '<?php if ( have_rows( 'actions_all_features' ) ) : ?><?php while ( have_rows( 'actions_all_features' ) ) : the_row(); ?><?php if ( have_rows( 'try_for_free' ) ) : ?><?php while ( have_rows( 'try_for_free' ) ) : the_row(); ?><?php the_sub_field( 'link' ); ?>'; return false;">
 			<div class="container">
 				<div class="block" data-aos="fade-up"
 					 data-aos-easing="ease"
