@@ -45,6 +45,9 @@ $user_mail = get_field('mail', 'user_'. $user_id );
 
             <div class="entry-content">
                 <?php
+
+
+                the_excerpt();
                 the_content(
                     sprintf(
                         wp_kses(
