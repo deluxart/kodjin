@@ -524,6 +524,8 @@
         display: grid;
         grid-template-columns: 132px 1fr;
         gap: 24px;
+        position: sticky;
+        top: 100px;
 
         a {
           text-decoration: none;
@@ -549,6 +551,10 @@
 .single-post {
   .blog_section {
     //overflow: visible;
+  }
+
+  #page {
+    overflow: clip;
   }
 
   .entry-content {

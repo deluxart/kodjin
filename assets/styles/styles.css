@@ -2948,6 +2948,8 @@ h5 {
   display: grid;
   grid-template-columns: 132px 1fr;
   gap: 24px;
+  position: sticky;
+  top: 100px;
 }
 .type-post .post_wrap .sidebar .whitepaper a {
   text-decoration: none;
@@ -2961,6 +2963,9 @@ h5 {
   object-fit: cover;
 }
 
+.single-post #page {
+  overflow: clip;
+}
 .single-post .entry-content ul {
   display: grid;
   gap: 10px;
