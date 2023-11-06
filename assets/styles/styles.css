@@ -4026,6 +4026,7 @@ h5 {
 }
 #solution_page.about #team .team-cards .card p {
   opacity: 0.7;
+  padding-right: 32px;
 }
 #solution_page.about #team .counters {
   background: #F0F0F0;

@@ -73,7 +73,7 @@ $post_slug = $post->post_name;
         </div>
         <section id="check_all_features" class="check_all_features">
             <div class="container">
-                <div class="image">
+                <div class="image" style="transform: translateY(-49%)">
                     <img data-aos="fade-left"
                          data-aos-easing="ease"
                          data-aos-duration="1000"

@@ -46,9 +46,10 @@ window.addEventListener('resize', ticker_checkScreenSize);
 if (typeof jQuery !== 'undefined') {
     jQuery(document).ready(function () {
         const checkNewsTicker = jQuery('#newsTicker').length;
-        const checkTickerStatus = localStorage.getItem('kodjin_newsTicker_06');
+        const currentMonth = new Date().getMonth();
+        const storedMonth = localStorage.getItem('kodjin_newsTicker_month');
 
-        if (checkNewsTicker && checkTickerStatus !== 'closed') {
+        if (checkNewsTicker && (!storedMonth || storedMonth !== currentMonth)) {
             const t = jQuery('#newsTicker');
             t.addClass('active');
 
@@ -60,7 +61,7 @@ if (typeof jQuery !== 'undefined') {
 
             const tClose = jQuery('#newsTicker .close');
             tClose.on('click', function () {
-                localStorage.setItem('kodjin_newsTicker_06', 'closed');
+                localStorage.setItem('kodjin_newsTicker_06', currentMonth);
                 t.removeClass('active');
             });
         }
