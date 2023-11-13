@@ -998,7 +998,7 @@ h5 {
 }
 
 .contactForm .head {
-  max-width: 600px;
+  max-width: 680px;
   margin-bottom: 44px;
 }
 @media (max-width: 992px) {
@@ -1011,7 +1011,7 @@ h5 {
   margin-bottom: 24px;
 }
 .contactForm .head p {
-  font-family: Arial, serif;
+  font-family: "Montserrat", serif;
   line-height: 130%;
 }
 .contactForm .successForm {
@@ -1840,11 +1840,12 @@ h5 {
     padding-top: 41px;
   }
 }
-.side h5 {
+.side .insights {
   text-transform: none;
+  display: inline-flex;
   margin-bottom: 8px;
 }
-.side h5:hover {
+.side .insights:hover {
   color: #FF6900;
 }
 .side .tags {

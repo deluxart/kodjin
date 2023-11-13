@@ -83,8 +83,9 @@
     padding-top: 41px;
   }
 
-  h5 {
+  .insights {
     text-transform: none;
+    display: inline-flex;
     margin-bottom: 8px;
 
     &:hover {

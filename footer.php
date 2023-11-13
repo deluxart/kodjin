@@ -31,7 +31,7 @@
                     <?php else : ?>
                     <div class="wrapForm">
                         <div class="head">
-                            <h1>Let`s chat</h1>
+                            <h2>Let`s chat</h2>
                             <p>We would be glad to share more details about our enterprise-level FHIR software solutions and other cases based on the HL7 FHIR standard.</p>
                         </div>
                         <div class="form kodjin_contact_from" data-name="contact_footer">

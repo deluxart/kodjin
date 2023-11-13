@@ -16,6 +16,11 @@ $cases = get_the_terms( get_the_ID(), 'casecat' );
 
 		<section id="head" class="<?php if ( get_field( 'press_picture' ) == 1 ) : ?>fix_img<?php endif; ?>">
             <div class="container">
+                <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <div>
+                        <?php if(function_exists('bcn_display')) { bcn_display(); } ?>
+                    </div>
+                </div>
                 <div class="row">
                     <?php $case_image = get_field( 'case_image' ); ?>
                     <?php if ( $case_image ) : ?>
@@ -247,6 +252,8 @@ $cases = get_the_terms( get_the_ID(), 'casecat' );
             <?php } ?>
 
         </div>
+
+        <?php echo do_shortcode('[cases-list posts="6" order="date" title="More cases"]') ?>
 
 	</main><!-- #main -->
 
