@@ -276,7 +276,7 @@ $section_bg_image = get_field( 'section_bg_image' );
 							<div data-aos="fade-up"
 								 data-aos-easing="ease"
 								 data-aos-duration="1000"
-								 data-aos-delay="<?php echo $em_card; ?>00" class="card">
+								 data-aos-delay="<?php echo $em_card; ?>00" class="card" style="cursor: pointer;" onclick="window.location.href = '<?php the_sub_field( 'link' ); ?>'; return false;">
 								<div>
 									<div class="cont">
 										<?php if ( have_rows( 'tags' ) ) : $th = 1; ?>

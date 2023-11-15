@@ -109,7 +109,7 @@
 									</li>
 									<li role="menuitem">
 										<a class="dropdown-link" href="<?php echo get_home_url(); ?>/mapper/">
-											Kodjin FHIR Mapper
+                                            Kodjin Data Mapper
 										</a>
 									</li>
 									<li role="menuitem">
@@ -193,14 +193,14 @@
 										<a class="dropdown-link" href="<?php echo get_home_url(); ?>/cases/">Case Studies</a>
 									</li>
 									<li role="menuitem">
-										<a class="dropdown-link" href="<?php echo get_home_url(); ?>/news-events/">News and Events</a>
-									</li>
-									<li role="menuitem">
 										<a class="dropdown-link" href="<?php echo get_home_url(); ?>/webinars/">Webinars</a>
 									</li>
 									<li role="menuitem">
 										<a class="dropdown-link" href="<?php echo get_home_url(); ?>/white-papers/">White Papers</a>
 									</li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="<?php echo get_home_url(); ?>/news-events/">News and Events</a>
+                                    </li>
 								</ul>
                                 <div class="side">
                                     <a href="<?php echo get_home_url(); ?>/blog"><span class="insights">Insights</span></a>

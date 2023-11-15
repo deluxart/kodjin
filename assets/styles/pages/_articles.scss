@@ -558,6 +558,14 @@
   }
 
   .entry-content {
+    .excerpt {
+      padding: 20px 30px;
+      background: $lightGray;
+
+      @media (max-width: 992px) {
+        padding: 16px;
+      }
+    }
     ul {
       display: grid;
       gap: 10px;

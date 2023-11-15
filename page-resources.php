@@ -367,7 +367,7 @@ get_header();
                     <h2>All about FHIR <br/>in simple words</h2>
                     <p>The only guide you will need</p>
                     <div class="actions">
-                        <a href="<?php echo get_home_url(); ?>/what-is-fhir/" class="btn white">Download</a>
+                        <a href="<?php echo get_home_url(); ?>/what-is-fhir/" class="btn white">Read more</a>
                     </div>
                 </div>
             </section>

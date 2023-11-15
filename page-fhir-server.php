@@ -325,7 +325,7 @@ $section_bg_image = get_field( 'section_bg_image' );
 					<?php if ( have_rows( 'button_check_all_features' ) ) : ?>
 						<?php while ( have_rows( 'button_check_all_features' ) ) : the_row(); ?>
 							<div>
-								<a href="<?php the_sub_field( 'link' ); ?>" class="btn white"><?php the_sub_field( 'title' ); ?></a>
+								<a href="<?php the_sub_field( 'link' ); ?>" target="_blank" class="btn white"><?php the_sub_field( 'title' ); ?></a>
 							</div>
 						<?php endwhile; ?>
 					<?php endif; ?>
@@ -435,7 +435,7 @@ $section_bg_image = get_field( 'section_bg_image' );
 							<div data-aos="fade-up"
 								 data-aos-easing="ease"
 								 data-aos-duration="1000"
-								 data-aos-delay="<?php echo $em_card; ?>00" class="card">
+								 data-aos-delay="<?php echo $em_card; ?>00" class="card" style="cursor: pointer;" onclick="window.location.href = '<?php the_sub_field( 'link' ); ?>'; return false;">
 								<div>
 									<div class="cont">
 										<h3><?php the_sub_field( 'title' ); ?></h3>
