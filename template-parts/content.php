@@ -82,6 +82,7 @@ $user_mail = get_field('mail', 'user_'. $user_id );
 
         <div class="sidebar">
             <div class="author card">
+                <h4 style="grid-column: 1/3;">Post author</h4>
                 <div>
                     <div class="photo">
                         <?php

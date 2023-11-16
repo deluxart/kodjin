@@ -2295,6 +2295,9 @@ h5 {
   margin-top: 32px;
   opacity: 0.7;
 }
+#footer .copyright a {
+  color: #FF6900;
+}
 #footer #contact_us {
   background: #fff;
   color: #151515;
