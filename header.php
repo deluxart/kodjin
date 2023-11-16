@@ -203,7 +203,7 @@
                                     </li>
 								</ul>
                                 <div class="side">
-                                    <a href="<?php echo get_home_url(); ?>/blog"><span class="insights">Insights</span></a>
+                                    <a href="<?php echo get_home_url(); ?>/blog/"><span class="insights">Insights</span></a>
                                     <ul class="tags">
                                         <li><a href="<?php echo get_home_url(); ?>/blog/category/featured/">Featured</a></li>
                                         <li><a href="<?php echo get_home_url(); ?>/blog/category/fhir/">FHIR</a></li>
