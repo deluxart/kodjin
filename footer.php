@@ -108,7 +108,7 @@
 				</div>
 			</div>
 			<div class="copyright">
-				Kodjin Interoperability Suite made by Edenlab is a custom software and product development company with a primary focus on healthcare data interoperability.
+				Kodjin Interoperability Suite made by <a href="https://edenlab.io/" target="_blank">Edenlab</a> is a custom software and product development company with a primary focus on healthcare data interoperability.
 			</div>
 		</div>
 	</footer><!-- #colophon -->
