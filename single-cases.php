@@ -10,6 +10,7 @@
 get_header();
 
 $cases = get_the_terms( get_the_ID(), 'casecat' );
+$attach_whitepaper = get_field('attach_whitepaper');
 ?>
 
 	<main id="case" class="case-single">
@@ -49,7 +50,7 @@ $cases = get_the_terms( get_the_ID(), 'casecat' );
             </div>
         </section>
         <div class="container">
-            <div class="content_block">
+            <div class="content_block<?php if ( $attach_whitepaper ) : ?> whitepaper<?php endif; ?>">
                 <div class="sections">
 
                     <?php if (get_field( 'description_client_background' )) { ?>
@@ -183,7 +184,43 @@ $cases = get_the_terms( get_the_ID(), 'casecat' );
                     <?php endif; ?>
 
                 </div>
-                <div></div>
+                <div>
+                    <?php if ( $attach_whitepaper ) : ?>
+                        <div class="card whitepaper">
+                            <?php $post = $attach_whitepaper; ?>
+                            <?php setup_postdata( $post ); ?>
+                            <?php $wallpaper_whitepaper = get_field( 'wallpaper_whitepaper' ); ?>
+                            <?php if ( $wallpaper_whitepaper ) : ?>
+                                <div class="image">
+                                    <a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url( $wallpaper_whitepaper['url'] ); ?>" alt="<?php echo esc_attr( $wallpaper_whitepaper['alt'] ); ?>" /></a>
+                                </div>
+                            <?php endif; ?>
+                            <div>
+                                <a href="<?php the_permalink(); ?>">
+                                    <h4><?php the_title(); ?></h4>
+                                </a>
+                                <a href="<?php the_permalink(); ?>" class="btn dark">Download</a>
+                            </div>
+                            <?php wp_reset_postdata(); ?>
+                        </div>
+
+                    <?php else : ?>
+                        <div class="card whitepaper">
+                            <?php $wallpaper_whitepaper = get_field( 'wallpaper_whitepaper', 1199 ); ?>
+                            <?php if ( $wallpaper_whitepaper ) : ?>
+                                <div class="image">
+                                    <a href="<?php the_permalink(1199); ?>"><img src="<?php echo esc_url( $wallpaper_whitepaper['url'] ); ?>" alt="<?php echo esc_attr( $wallpaper_whitepaper['alt'] ); ?>" /></a>
+                                </div>
+                            <?php endif; ?>
+                            <div>
+                                <a href="<?php the_permalink(1199); ?>">
+                                    <h4><?php echo get_the_title(1199); ?></h4>
+                                </a>
+                                <a href="<?php the_permalink(1199); ?>" class="btn dark">Download</a>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
 
             <?php if (get_field( 'section_title_testimonials' )) { ?>

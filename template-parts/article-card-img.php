@@ -2,7 +2,14 @@
      data-aos-easing="ease"
      data-aos-duration="1000"
      data-aos-delay="<?php echo $bc; ?>00" class="swiper-slide articleCard image" onclick="window.location.href = '<?php the_permalink() ?>'; return false;">
-    <?php if( has_post_thumbnail() ) { ?>
+    <?php
+    $post_wallpaper = get_field('post_wallpaper');
+    if ($post_wallpaper) {
+        ?>
+        <div class="image">
+            <img src="<?php echo esc_url($post_wallpaper['url']); ?>" alt="<?php echo esc_attr($post_wallpaper['alt']); ?>" />
+        </div>
+    <?php } elseif( has_post_thumbnail() ) { ?>
         <div class="image">
             <?php the_post_thumbnail(); ?>
         </div>

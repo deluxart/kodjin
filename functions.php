@@ -344,16 +344,21 @@ function recent_posts_shortcode( $atts ) {
                  data-aos-duration="1000"
                  data-aos-delay="<?php echo $bc; ?>00">
 
-                <?php if ($image) { ?>
-                    <?php if( has_post_thumbnail() ) { ?>
-                        <div class="image">
-                            <?php the_post_thumbnail(); ?>
-                        </div>
-                    <?php } else { ?>
-                        <div class="image no-image">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog_no_img.jpg" alt="no-image" />
-                        </div>
-                    <?php } ?>
+                <?php
+                $post_wallpaper = get_field('post_wallpaper');
+                if ($post_wallpaper) {
+                    ?>
+                    <div class="image">
+                        <img src="<?php echo esc_url($post_wallpaper['url']); ?>" alt="<?php echo esc_attr($post_wallpaper['alt']); ?>" />
+                    </div>
+                <?php } elseif ($image && has_post_thumbnail()) { ?>
+                    <div class="image">
+                        <?php the_post_thumbnail(); ?>
+                    </div>
+                <?php } else { ?>
+                    <div class="image no-image">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog_no_img.jpg" alt="no-image" />
+                    </div>
                 <?php } ?>
 
                 <a href="<?php the_permalink() ?>"><div class="title"><?php the_title(); ?></div></a>

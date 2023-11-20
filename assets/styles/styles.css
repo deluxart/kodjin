@@ -47,7 +47,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 #page {
   position: relative;
-  overflow: hidden;
+  overflow: unset;
 }
 
 #primary {
@@ -4559,7 +4559,7 @@ h5 {
 }
 @media (max-width: 992px) {
   .case-single #head .row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 .case-single #head .row .image img {
@@ -4595,6 +4595,36 @@ h5 {
 }
 .case-single .content_block {
   padding: 108px 0 72px;
+}
+.case-single .content_block.whitepaper {
+  display: grid;
+  gap: 42px;
+}
+@media (min-width: 992px) {
+  .case-single .content_block.whitepaper {
+    grid-template-columns: 1fr 430px;
+  }
+}
+.case-single .content_block.whitepaper .whitepaper {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  gap: 24px;
+  position: sticky;
+  top: 100px;
+  border-radius: 24px;
+  background: #F0F0F0;
+  padding: 32px;
+}
+.case-single .content_block.whitepaper .whitepaper a {
+  text-decoration: none;
+}
+.case-single .content_block.whitepaper .whitepaper h4 {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+.case-single .content_block.whitepaper .whitepaper .image img {
+  width: 132px;
+  object-fit: cover;
 }
 .case-single .content_block .sections {
   display: grid;
