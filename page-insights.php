@@ -8,7 +8,7 @@ get_header();
 $blog_id = get_option('page_for_posts', true);
 ?>
 
-    <main id="primary" class="site-main articles">
+    <main id="primary" class="site-main articles insights">
 
         <div class="container">
             <div class="page__head">
@@ -65,7 +65,7 @@ $blog_id = get_option('page_for_posts', true);
                 </div>
                 <div>
                     <div class="list">
-                        <?php echo do_shortcode( '[recent_posts offset="1" posts="3"]' ); ?>
+                        <?php echo do_shortcode( '[recent_posts offset="1" posts="3" image="false"]' ); ?>
                     </div>
                 </div>
             </div>

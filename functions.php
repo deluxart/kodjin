@@ -172,7 +172,7 @@ add_action( 'widgets_init', 'kodjin_widgets_init' );
  */
 function kodjin_scripts() {
 	wp_enqueue_style( 'kodjin-style', get_stylesheet_uri(), array(), _S_VERSION );
-    wp_enqueue_style( 'kodjin-styles', get_template_directory_uri() . '/assets/styles/styles.css?1151120233', array(), '1151120233' );
+    wp_enqueue_style( 'kodjin-styles', get_template_directory_uri() . '/assets/styles/styles.css?1151111120233', array(), '1111151120233' );
     wp_enqueue_style( 'kodjin-swiper', get_template_directory_uri() . '/assets/styles/libs/swiper.min.css', array(), _S_VERSION );
     wp_enqueue_style( 'kodjin-liMarquee', get_template_directory_uri() . '/assets/styles/libs/liMarquee.css', array(), _S_VERSION );
 //    wp_enqueue_style( 'kodjin-aos', get_template_directory_uri() . '/assets/styles/libs/aos.css', array(), _S_VERSION );
@@ -344,6 +344,7 @@ function recent_posts_shortcode( $atts ) {
                  data-aos-duration="1000"
                  data-aos-delay="<?php echo $bc; ?>00">
 
+                <?php if ($image) { ?>
                 <?php
                 $post_wallpaper = get_field('post_wallpaper');
                 if ($post_wallpaper) {
@@ -351,7 +352,7 @@ function recent_posts_shortcode( $atts ) {
                     <div class="image">
                         <img src="<?php echo esc_url($post_wallpaper['url']); ?>" alt="<?php echo esc_attr($post_wallpaper['alt']); ?>" />
                     </div>
-                <?php } elseif ($image && has_post_thumbnail()) { ?>
+                <?php } elseif (has_post_thumbnail()) { ?>
                     <div class="image">
                         <?php the_post_thumbnail(); ?>
                     </div>
@@ -359,6 +360,9 @@ function recent_posts_shortcode( $atts ) {
                     <div class="image no-image">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog_no_img.jpg" alt="no-image" />
                     </div>
+                <?php } ?>
+
+
                 <?php } ?>
 
                 <a href="<?php the_permalink() ?>"><div class="title"><?php the_title(); ?></div></a>

@@ -203,22 +203,6 @@ $attach_whitepaper = get_field('attach_whitepaper');
                             </div>
                             <?php wp_reset_postdata(); ?>
                         </div>
-
-                    <?php else : ?>
-                        <div class="card whitepaper">
-                            <?php $wallpaper_whitepaper = get_field( 'wallpaper_whitepaper', 1199 ); ?>
-                            <?php if ( $wallpaper_whitepaper ) : ?>
-                                <div class="image">
-                                    <a href="<?php the_permalink(1199); ?>"><img src="<?php echo esc_url( $wallpaper_whitepaper['url'] ); ?>" alt="<?php echo esc_attr( $wallpaper_whitepaper['alt'] ); ?>" /></a>
-                                </div>
-                            <?php endif; ?>
-                            <div>
-                                <a href="<?php the_permalink(1199); ?>">
-                                    <h4><?php echo get_the_title(1199); ?></h4>
-                                </a>
-                                <a href="<?php the_permalink(1199); ?>" class="btn dark">Download</a>
-                            </div>
-                        </div>
                     <?php endif; ?>
                 </div>
             </div>

@@ -8,7 +8,7 @@ get_header();
 $blog_id = get_option('page_for_posts', true);
 ?>
 
-    <main id="primary" class="site-main articles">
+    <main id="primary" class="site-main articles insights">
 
         <div class="container">
             <div class="page__head">
