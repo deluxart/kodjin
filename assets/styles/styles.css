@@ -5041,6 +5041,9 @@ h5 {
     grid-template-columns: 120px 1fr;
   }
 }
+.other_whitepapers .card a {
+  text-decoration: none;
+}
 .other_whitepapers .card .image img {
   width: 160px;
   height: auto;

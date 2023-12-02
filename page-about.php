@@ -65,27 +65,25 @@ $section_bg_image = get_field( 'section_bg_image' );
         </section>
 
         <section id="partners_head">
-            <div class="container">
-                <div class="head">
-                    <h2 class="tc mb-32" data-aos="fade-up"
-                        data-aos-easing="ease"
-                        data-aos-duration="1000"
-                        data-aos-delay="100"><?php the_field( 'section_title_partners' ); ?></h2>
-                </div>
-                <?php if ( have_rows( 'partners_head' ) ) : ?>
-                    <div class="logos mWrap" data-aos="fade-up"
-                         data-aos-easing="ease"
-                         data-aos-duration="1000"
-                         data-aos-delay="200">
-                        <?php while ( have_rows( 'partners_head' ) ) : the_row(); ?>
-                            <?php $logo = get_sub_field( 'logo' ); ?>
-                            <?php if ( $logo ) : ?>
-                                <img src="<?php echo esc_url( $logo['url'] ); ?>" style="opacity: 1;" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />
-                            <?php endif; ?>
-                        <?php endwhile; ?>
-                    </div>
-                <?php endif; ?>
+            <div class="head">
+                <h2 class="tc mb-32" data-aos="fade-up"
+                    data-aos-easing="ease"
+                    data-aos-duration="1000"
+                    data-aos-delay="100"><?php the_field( 'section_title_partners' ); ?></h2>
             </div>
+            <?php if ( have_rows( 'partners_head' ) ) : ?>
+                <div class="logos mWrap" data-aos="fade-up"
+                     data-aos-easing="ease"
+                     data-aos-duration="1000"
+                     data-aos-delay="200">
+                    <?php while ( have_rows( 'partners_head' ) ) : the_row(); ?>
+                        <?php $logo = get_sub_field( 'logo' ); ?>
+                        <?php if ( $logo ) : ?>
+                            <img src="<?php echo esc_url( $logo['url'] ); ?>" style="opacity: 1;" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />
+                        <?php endif; ?>
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
         </section>
 
 

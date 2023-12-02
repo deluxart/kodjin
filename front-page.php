@@ -118,18 +118,16 @@ $section_bg_image = get_field( 'section_bg_image' );
 		</section>
 
 		<section id="partners_head">
-			<div class="container">
-				<?php if ( have_rows( 'partners_head' ) ) : ?>
-				<div class="logos mWrap">
-					<?php while ( have_rows( 'partners_head' ) ) : the_row(); ?>
-						<?php $logo = get_sub_field( 'logo' ); ?>
-						<?php if ( $logo ) : ?>
-							<img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />
-						<?php endif; ?>
-					<?php endwhile; ?>
-				</div>
-				<?php endif; ?>
-			</div>
+            <?php if ( have_rows( 'partners_head' ) ) : ?>
+            <div class="logos mWrap">
+                <?php while ( have_rows( 'partners_head' ) ) : the_row(); ?>
+                    <?php $logo = get_sub_field( 'logo' ); ?>
+                    <?php if ( $logo ) : ?>
+                        <img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />
+                    <?php endif; ?>
+                <?php endwhile; ?>
+            </div>
+            <?php endif; ?>
 		</section>
 
 		<section id="interoperability_suite">
