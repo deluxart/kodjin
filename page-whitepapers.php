@@ -47,7 +47,7 @@ get_header();
                                     <?php $wallpaper_whitepaper = get_field( 'wallpaper_whitepaper' ); ?>
                                     <?php if ( $wallpaper_whitepaper ) : ?>
                                         <div class="image">
-                                            <img src="<?php echo esc_url( $wallpaper_whitepaper['url'] ); ?>" alt="<?php echo esc_attr( $wallpaper_whitepaper['alt'] ); ?>" />
+                                            <a href="<?php the_permalink() ?>"><img src="<?php echo esc_url( $wallpaper_whitepaper['url'] ); ?>" alt="<?php echo esc_attr( $wallpaper_whitepaper['alt'] ); ?>" /></a>
                                         </div>
                                     <?php endif; ?>
                                 </div>

@@ -5107,6 +5107,9 @@ h5 {
 .whitepapers-archive .whitepapers .card ul {
   margin-top: 12px;
 }
+.whitepapers-archive .whitepapers .card a {
+  text-decoration: none;
+}
 
 .resourcesSlider {
   overflow: hidden;
