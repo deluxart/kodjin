@@ -1,11 +1,3 @@
-body {
-  &.home {
-    #page {
-      overflow: hidden;
-    }
-  }
-}
-
 .page {
   &__head {
     margin-bottom: 48px;
@@ -35,6 +27,12 @@ body {
       @media (max-width: 992px) {
         padding: 110px 0 82px;
       }
+    }
+  }
+
+  &.home {
+    #page {
+      overflow: hidden;
     }
   }
 }
