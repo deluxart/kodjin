@@ -252,7 +252,7 @@ get_header();
                                 </div>
                             </div>
                         <?php }
-                        wp_reset_postdata(); // Восстанавливаем оригинальные данные
+                        wp_reset_postdata();
                     } ?>
                                     </div>
                                 </div>

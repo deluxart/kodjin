@@ -86,7 +86,6 @@ $section_bg_image = get_field( 'section_bg_image' );
 		</section>
 
 		<section id="partners_head">
-			<div class="container">
 				<?php if ( have_rows( 'partners_head' ) ) : ?>
 					<div class="logos mWrap">
 						<?php while ( have_rows( 'partners_head' ) ) : the_row(); ?>
@@ -97,7 +96,6 @@ $section_bg_image = get_field( 'section_bg_image' );
 						<?php endwhile; ?>
 					</div>
 				<?php endif; ?>
-			</div>
 		</section>
 
 		<?php if ( get_field( 'video_iframe_head' ) ) : ?>
@@ -324,6 +322,7 @@ $section_bg_image = get_field( 'section_bg_image' );
 					<h3><?php the_field( 'block_title_check_all_features' ); ?></h3>
 					<?php if ( have_rows( 'button_check_all_features' ) ) : ?>
 						<?php while ( have_rows( 'button_check_all_features' ) ) : the_row(); ?>
+                            <div class="linkBlock" onclick="window.location.href = '<?php the_sub_field( 'link' ); ?>'; return false;"></div>
 							<div>
 								<a href="<?php the_sub_field( 'link' ); ?>" target="_blank" class="btn white"><?php the_sub_field( 'title' ); ?></a>
 							</div>
@@ -525,6 +524,7 @@ $section_bg_image = get_field( 'section_bg_image' );
 								<?php if ( have_rows( 'link' ) ) : ?>
 									<?php while ( have_rows( 'link' ) ) : the_row(); ?>
 										<?php if (get_sub_field( 'link' )) {?>
+                                            <a data-name="<?php the_sub_field( 'link' ); ?>" class="da-modal card_link"></a>
 											<button data-name="<?php the_sub_field( 'link' ); ?>" class="da-modal read <?php the_sub_field( 'icon' ); ?>">
 												<?php if (get_sub_field( 'icon' ) === 'link') {?>
 													<svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">

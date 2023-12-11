@@ -1573,7 +1573,6 @@ h5 {
   border-radius: 50%;
   cursor: pointer;
   /* Vertical line */
-  /* horizontal line */
 }
 @media (max-width: 768px) {
   .spoiler > .head .openClose {
@@ -1621,6 +1620,12 @@ h5 {
 .spoiler > .cont {
   display: none;
   padding-bottom: 24px;
+  padding-right: 48px;
+}
+@media (max-width: 768px) {
+  .spoiler > .cont {
+    padding-right: 42px;
+  }
 }
 .spoiler.light {
   border-bottom: 1px solid rgba(255, 255, 255, 0.231372549);
@@ -2683,9 +2688,6 @@ h5 {
   .articles .featured_posts .articles .articleCard {
     padding: 40px 32px;
   }
-}
-.articles .updates_by_category {
-  padding-bottom: 60px;
 }
 .articles .updates_by_category ul {
   display: flex;
@@ -4325,6 +4327,9 @@ h5 {
 #solution_page.what_is_fhir .what_is_fhir_section .row .cards .card strong {
   display: block;
 }
+#solution_page.what_is_fhir .check_all_features {
+  position: relative;
+}
 #solution_page.what_is_fhir .check_all_features .row {
   position: relative;
 }
@@ -4487,6 +4492,18 @@ h5 {
   gap: 16px;
 }
 
+.check_all_features {
+  position: relative;
+}
+.check_all_features .linkBlock {
+  position: absolute !important;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
 @media (min-width: 992px) {
   .check_all_features {
     padding: 54px 0;
@@ -4799,6 +4816,9 @@ h5 {
 .webinar-single {
   padding: 164px 0 65px;
 }
+.webinar-single #latest-posts .articlesCols {
+  overflow: hidden;
+}
 .webinar-single .page-head .webinar {
   position: relative;
   width: 100%;
@@ -4897,6 +4917,13 @@ h5 {
 
 .webinars-archive {
   padding: 164px 0 65px;
+  overflow: hidden;
+}
+.webinars-archive #features_posts {
+  padding-top: 130px;
+}
+.webinars-archive #whitepapers {
+  overflow: hidden;
 }
 .webinars-archive .page-head h2, .webinars-archive .page-head h1 {
   margin-top: 12px;

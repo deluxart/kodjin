@@ -56,7 +56,6 @@
         }
       }
 
-      /* horizontal line */
       &:after{
         top: 50%;
         left: 13px;
@@ -80,6 +79,11 @@
   & > .cont {
     display: none;
     padding-bottom: 24px;
+    padding-right: 48px;
+
+    @media (max-width: $sp_bp) {
+      padding-right: 42px;
+    }
   }
 
   &.light {

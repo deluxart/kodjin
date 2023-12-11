@@ -93,7 +93,43 @@ $post_slug = $post->post_name;
         </section>
         <?php echo do_shortcode('[webinars-list posts="6" order="date" title="More webinars"]') ?>
 
-	</main><!-- #main -->
+        <?php
+        $args_latest = array(
+            'post_type' => 'post',
+            'posts_per_page' => 5,
+            'orderby' => 'date',
+            'order' => 'DESC'
+        );
+
+        $query_latest = new WP_Query($args_latest);
+
+        if ($query_latest->have_posts()) { ?>
+            <section id="latest-posts" class="latest_posts_section">
+                <div class="container">
+                <div class="head mb-32">
+                    <div>
+                        <h2 data-aos="fade-up"
+                            data-aos-easing="ease"
+                            data-aos-duration="1000"
+                            data-aos-delay="100">Latest Articles</h2>
+                    </div>
+                </div>
+
+                <div class="articlesCols">
+                    <div class="swiper-wrapper">
+                        <?php
+                        while ($query_latest->have_posts()) {
+                            $query_latest->the_post();
+                            get_template_part('template-parts/article-card-img', get_post_format());
+                        }
+                        wp_reset_postdata(); ?>
+                    </div>
+                </div>
+                </div>
+            </section>
+        <?php } ?>
+
+    </main><!-- #main -->
 
 <?php
 get_footer();

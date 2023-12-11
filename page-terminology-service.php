@@ -86,7 +86,6 @@ $section_bg_image = get_field( 'section_bg_image' );
 		</section>
 
 		<section id="partners_head">
-			<div class="container">
 				<?php if ( have_rows( 'partners_head' ) ) : ?>
 					<div class="logos mWrap">
 						<?php while ( have_rows( 'partners_head' ) ) : the_row(); ?>
@@ -97,7 +96,6 @@ $section_bg_image = get_field( 'section_bg_image' );
 						<?php endwhile; ?>
 					</div>
 				<?php endif; ?>
-			</div>
 		</section>
 
 		<?php if ( get_field( 'video_iframe_head' ) ) : ?>

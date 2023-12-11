@@ -106,7 +106,8 @@ if (articlesScreens >= 1) {
 }
 
 const articlesCoolsScreens = jQuery('#blog .articlesCols').length;
-if (articlesCoolsScreens >= 1) {
+const webinarCoolsScreens = jQuery('#webinar .articlesCols').length;
+if (articlesCoolsScreens >= 1 || webinarCoolsScreens >= 1) {
     const articlesColsSlider = new Swiper('.articlesCols', {
         slidesPerView: 1,
         spaceBetween: 18,

@@ -1,6 +1,11 @@
 .webinar-single {
   padding: 164px 0 65px;
 
+
+  #latest-posts .articlesCols {
+    overflow: hidden;
+  }
+
   .page-head {
     .webinar {
       position: relative;
@@ -119,6 +124,15 @@
 
 .webinars-archive {
   padding: 164px 0 65px;
+  overflow: hidden;
+
+  #features_posts {
+    padding-top: 130px;
+  }
+
+  #whitepapers {
+    overflow: hidden;
+  }
 
   .page-head {
     h2, h1 {

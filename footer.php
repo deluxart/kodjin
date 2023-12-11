@@ -176,7 +176,12 @@
 				<div class="contactForm white_paper">
 				<div class="wrapForm">
 					<div class="image">
+                        <?php $default_wp_wallpaper = get_field( 'default_wp_wallpaper', 'option' ); ?>
+                        <?php if ( $default_wp_wallpaper ) : ?>
+                            <img src="<?php echo esc_url( $default_wp_wallpaper['url'] ); ?>" style="max-width: 380px;" alt="<?php echo esc_attr( $default_wp_wallpaper['alt'] ); ?>" />
+                        <?php else : ?>
 						<img src="/wp-content/uploads/2023/07/kodjin_white_paper.jpg" alt="Kodjin White Paper" />
+                        <?php endif; ?>
 					</div>
 					<div>
 						<div class="head">
