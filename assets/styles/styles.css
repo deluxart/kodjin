@@ -2429,6 +2429,10 @@ h5 {
   padding: 5px 0;
 }
 
+body.home #page {
+  overflow: hidden;
+}
+
 .page__head {
   margin-bottom: 48px;
 }
@@ -2454,9 +2458,6 @@ h5 {
   .page-template-page-contacts #footer {
     padding: 110px 0 82px;
   }
-}
-.page.home #page {
-  overflow: hidden;
 }
 
 @media (min-width: 992px) {
