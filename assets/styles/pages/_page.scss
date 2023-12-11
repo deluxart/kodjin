@@ -29,6 +29,12 @@
       }
     }
   }
+
+  &.home {
+    #page {
+      overflow: hidden;
+    }
+  }
 }
 
 .page-template-page-contacts {

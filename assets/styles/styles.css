@@ -2455,6 +2455,9 @@ h5 {
     padding: 110px 0 82px;
   }
 }
+.page.home #page {
+  overflow: hidden;
+}
 
 @media (min-width: 992px) {
   .page-template-page-contacts .kodjin_contact_from.contact_us label.message {
