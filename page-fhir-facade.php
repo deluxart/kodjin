@@ -243,7 +243,7 @@ $section_bg_image = get_field( 'section_bg_image' );
                      data-aos-delay="100">
                     <h2><?php the_field( 'block_title_check_all_features' ); ?></h2>
                     <?php the_field( 'block_description_all_features' ); ?>
-                    <div class="actions">
+                    <div class="actions" style="position: initial">
                         <?php if ( have_rows( 'actions_all_features' ) ) : ?>
                             <?php while ( have_rows( 'actions_all_features' ) ) : the_row(); ?>
                                 <div class="linkBlock da-modal" data-name="<?php the_sub_field( 'button_link' ); ?>"></div>
