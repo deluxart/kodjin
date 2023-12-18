@@ -2681,6 +2681,11 @@ h5 {
   position: relative;
   margin-bottom: 48px;
 }
+.articles .featured_posts .head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
 @media (min-width: 992px) {
   .articles .featured_posts .articles:hover .slider-nav {
     transform: translateY(-50%);

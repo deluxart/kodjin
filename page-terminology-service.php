@@ -601,6 +601,7 @@ $section_bg_image = get_field( 'section_bg_image' );
 								</div>
 								<?php if ( have_rows( 'link' ) ) : ?>
 									<?php while ( have_rows( 'link' ) ) : the_row(); ?>
+                                        <a data-name="<?php the_sub_field( 'link' ); ?>" class="da-modal card_link"></a>
 										<button data-name="<?php the_sub_field( 'link' ); ?>" class="da-modal read <?php the_sub_field( 'icon' ); ?>">
 											<?php if (get_sub_field( 'icon' ) === 'link') {?>
 												<svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">

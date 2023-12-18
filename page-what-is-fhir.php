@@ -407,17 +407,17 @@ $section_bg_image = get_field( 'section_bg_image' );
                             data-aos-duration="1000"
                             data-aos-delay="100"><?php the_field( 'section_title_faq' ); ?></h2>
                     </div>
-                    <div data-aos="fade-left"
-                         data-aos-easing="ease"
-                         data-aos-duration="1000"
-                         data-aos-delay="200" class="more">
-                        <a href="#" class="read_more">
-                            <span>All questions and answers</span>
-                            <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8844 8.61788L25.2324 7.47411L23.8844 6.33035L16.8435 0.356267C16.2119 -0.179707 15.2653 -0.102119 14.7293 0.529564C14.1933 1.16125 14.2709 2.10782 14.9026 2.64379L18.8282 5.97464L1.89863 5.97464C1.07021 5.97464 0.398634 6.64621 0.398634 7.47464C0.398634 8.30307 1.07021 8.97464 1.89863 8.97464L18.827 8.97464L14.9026 12.3044C14.2709 12.8404 14.1933 13.787 14.7293 14.4187C15.2653 15.0503 16.2118 15.1279 16.8435 14.592L23.8844 8.61788Z" fill="currentColor"/>
-                            </svg>
-                        </a>
-                    </div>
+<!--                    <div data-aos="fade-left"-->
+<!--                         data-aos-easing="ease"-->
+<!--                         data-aos-duration="1000"-->
+<!--                         data-aos-delay="200" class="more">-->
+<!--                        <a href="#" class="read_more">-->
+<!--                            <span>All questions and answers</span>-->
+<!--                            <svg width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.8844 8.61788L25.2324 7.47411L23.8844 6.33035L16.8435 0.356267C16.2119 -0.179707 15.2653 -0.102119 14.7293 0.529564C14.1933 1.16125 14.2709 2.10782 14.9026 2.64379L18.8282 5.97464L1.89863 5.97464C1.07021 5.97464 0.398634 6.64621 0.398634 7.47464C0.398634 8.30307 1.07021 8.97464 1.89863 8.97464L18.827 8.97464L14.9026 12.3044C14.2709 12.8404 14.1933 13.787 14.7293 14.4187C15.2653 15.0503 16.2118 15.1279 16.8435 14.592L23.8844 8.61788Z" fill="currentColor"/>-->
+<!--                            </svg>-->
+<!--                        </a>-->
+<!--                    </div>-->
                 </div>
                 <div class="questions">
                     <div class="list">
