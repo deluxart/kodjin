@@ -2458,7 +2458,7 @@ h5 {
 .page.home #page, .page.resources #page {
   overflow: hidden;
 }
-.page.home #primary, .page.resources #primary {
+.page.home #primary, .page.page-template-page-resources #primary {
   overflow: hidden;
 }
 
