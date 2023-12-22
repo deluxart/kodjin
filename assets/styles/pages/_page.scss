@@ -30,8 +30,14 @@
     }
   }
 
-  &.home {
+  &.home, &.resources {
     #page {
+      overflow: hidden;
+    }
+  }
+
+  &.home, &.resources {
+    #primary {
       overflow: hidden;
     }
   }

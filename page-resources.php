@@ -117,7 +117,7 @@ get_header();
                 </div>
             </div>
             <section id="features_posts" class="featured_posts">
-                <div class="head mb-32">
+                <div class="head mb-32" style="display: grid;grid-template-columns: 1fr auto;align-items: center;">
                     <h3 data-aos="fade-up" style="margin-bottom: 0"
                         data-aos-easing="ease"
                         data-aos-duration="1000"

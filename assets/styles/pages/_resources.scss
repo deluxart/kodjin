@@ -65,8 +65,8 @@
       height: 58px;
 
       @media (min-width: $tb_bp) {
-        transform: translateY(-100%);
-        opacity: 0;
+        transform: translateY(-50%);
+        opacity: 1;
       }
 
       @media (max-width: $tb_bp) {
@@ -91,14 +91,14 @@
       }
     }
 
-    &:hover {
-      .slider-nav {
-        @media (min-width: $tb_bp) {
-          transform: translateY(-50%);
-          opacity: 1;
-        }
-      }
-    }
+    //&:hover {
+    //  .slider-nav {
+    //    @media (min-width: $tb_bp) {
+    //      transform: translateY(-50%);
+    //      opacity: 1;
+    //    }
+    //  }
+    //}
   }
 }
 
