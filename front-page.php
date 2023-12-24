@@ -174,6 +174,7 @@ $section_bg_image = get_field( 'section_bg_image' );
 									</div>
 									<?php if ( have_rows( 'link' ) ) : ?>
 										<?php while ( have_rows( 'link' ) ) : the_row(); ?>
+                                            <a href="<?php the_sub_field( 'link' ); ?>" class="card_link"></a>
 											<a href="<?php echo do_shortcode('[site_url]'); ?><?php the_sub_field( 'link' ); ?>" class="read <?php the_sub_field( 'icon' ); ?>">
 												<?php if (get_sub_field( 'icon' ) === 'link') {?>
 													<svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -276,6 +277,7 @@ $section_bg_image = get_field( 'section_bg_image' );
 									</div>
 									<?php if ( have_rows( 'link' ) ) : ?>
 										<?php while ( have_rows( 'link' ) ) : the_row(); ?>
+                                            <a href="<?php the_sub_field( 'link' ); ?>" class="card_link"></a>
 											<a href="<?php echo do_shortcode('[site_url]'); ?><?php the_sub_field( 'link' ); ?>" class="read <?php the_sub_field( 'icon' ); ?>">
 												<?php if (get_sub_field( 'icon' ) === 'link') {?>
 													<svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
