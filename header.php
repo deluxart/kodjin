@@ -29,6 +29,10 @@
 
 	<?php wp_head(); ?>
 
+    <?php if ( is_page_template('page-test-forms.php') ) { ?>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+    <?php } ?>
+
 </head>
 
 <body <?php body_class(); ?>>
