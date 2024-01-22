@@ -2922,7 +2922,7 @@ h5 {
 }
 @media (min-width: 992px) {
   .type-post .post_wrap {
-    grid-template-columns: 1fr 430px;
+    grid-template-columns: minmax(0, 1fr) 430px;
   }
 }
 .type-post .post_wrap .check_all_features {
@@ -4633,7 +4633,7 @@ h5 {
 }
 @media (min-width: 992px) {
   .case-single .content_block.whitepaper {
-    grid-template-columns: 1fr 430px;
+    grid-template-columns: minmax(0, 1fr) 430px;
   }
 }
 .case-single .content_block.whitepaper .whitepaper {
