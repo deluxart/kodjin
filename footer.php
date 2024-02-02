@@ -28,7 +28,7 @@
                         </div>
 					</div>
 
-                    <?php elseif (is_page('page-test-forms')) : ?>
+                    <?php elseif (is_page('page-test-form')) : ?>
                         <!-- Код для страницы 'page-test-forms' -->
                         <div class="wrapForm">
                             <div class="head">
