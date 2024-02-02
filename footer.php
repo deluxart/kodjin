@@ -28,6 +28,17 @@
                         </div>
 					</div>
 
+                    <?php elseif (is_page('page-test-forms')) : ?>
+                        <!-- Код для страницы 'page-test-forms' -->
+                        <div class="wrapForm">
+                            <div class="head">
+                                <h1>Special test Form</h1>
+                                <p>This is a special form for the 'page-test-forms' page.</p>
+                            </div>
+                            <div class="form special_form" data-name="special_form">
+                                <?php echo do_shortcode('[contact-form-7 id="b21ec70" title="Contact form_test"]'); ?>
+                            </div>
+                        </div>
                     <?php else : ?>
                     <div class="wrapForm">
                         <div class="head">
