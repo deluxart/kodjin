@@ -382,11 +382,11 @@ $section_bg_image = get_field( 'section_bg_image' );
 					<h2 data-aos="fade-up"
 						data-aos-easing="ease"
 						data-aos-duration="1000"
-						data-aos-delay="100"><?php the_field( 'section_title_why_choose_kodjin' ); ?></h2>
+						data-aos-delay="100"><?php the_field( 'section_title_why_choose_kodjin', 'option' ); ?></h2>
 				</div>
-				<?php if ( have_rows( 'cards_why_choose_kodjin' ) ) : $why_item = 1; ?>
+				<?php if ( have_rows( 'cards_why_choose_kodjin', 'option' ) ) : $why_item = 1; ?>
 					<div class="items">
-						<?php while ( have_rows( 'cards_why_choose_kodjin' ) ) : the_row(); $why_item++; ?>
+						<?php while ( have_rows( 'cards_why_choose_kodjin', 'option' ) ) : the_row(); $why_item++; ?>
 							<div data-aos="fade-up"
 								 data-aos-easing="ease"
 								 data-aos-duration="1000"
@@ -403,9 +403,9 @@ $section_bg_image = get_field( 'section_bg_image' );
 						<?php endwhile; ?>
 					</div>
 				<?php endif; ?>
-				<?php if ( have_rows( 'actions_why_choose_kodjin' ) ) : $why_context_card = 1; ?>
+				<?php if ( have_rows( 'actions_why_choose_kodjin', 'option' ) ) : $why_context_card = 1; ?>
 					<div class="cards actions">
-						<?php while ( have_rows( 'actions_why_choose_kodjin' ) ) : the_row(); $why_context_card++; ?>
+						<?php while ( have_rows( 'actions_why_choose_kodjin', 'option' ) ) : the_row(); $why_context_card++; ?>
 							<?php $card_title = get_sub_field( 'title' ); ?>
 							<div data-aos="fade-up"
 								 data-aos-easing="ease"
