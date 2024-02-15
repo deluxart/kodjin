@@ -227,6 +227,7 @@ ul.petal li:before {
 }
 .breadcrumb a {
   text-decoration: none;
+  white-space: nowrap;
 }
 .breadcrumb > div {
   display: flex;
