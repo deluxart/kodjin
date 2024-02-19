@@ -513,6 +513,7 @@ function set_data_attribute_for_cf7_forms() {
                         const inputField_last_source = form.querySelector('input[name="last_source"]'); // Current form last_source
                         const inputField_first_page = form.querySelector('input[name="first_page"]'); // Current form first_page
                         const inputField_last_landing_page = form.querySelector('input[name="last_landing_page"]'); // Current form last_landing_page
+                        const inputField_current_page_url = form.querySelector('input[name="current_page_url"]'); // Current form last_landing_page
                         const inputField_pdf = form.querySelector('input[name="pdf_file"]'); // PDF_File field
                         const inputField_pdfName = form.querySelector('input[name="pdf_name"]'); // PDF_Name field
 
@@ -589,6 +590,11 @@ function set_data_attribute_for_cf7_forms() {
                         if (inputField_last_landing_page) {
                             inputField_last_landing_page.setAttribute('value', sbjs.get.current_add.ep);
                             inputField_last_landing_page.setAttribute('data-name', dataNameAttribute);
+                        }
+
+                        if (inputField_current_page_url) {
+                            inputField_current_page_url.setAttribute('value', window.location.href);
+                            inputField_current_page_url.setAttribute('data-name', dataNameAttribute);
                         }
                     }
                 });
