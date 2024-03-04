@@ -2511,6 +2511,31 @@ h5 {
   color: black;
 }
 
+.page-template-page-joint-project .join-page .contactForm {
+  border-radius: 12px;
+  background: #F0F0F0;
+  margin-top: 40px;
+}
+@media (min-width: 992px) {
+  .page-template-page-joint-project .join-page .contactForm {
+    padding: 72px;
+  }
+}
+.page-template-page-joint-project .join-page .contactForm h2 {
+  margin-bottom: 40px;
+}
+.page-template-page-joint-project .join-page .contactForm .form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.page-template-page-joint-project .join-page .contactForm .wpcf7-form .fields input:not([type=submit]) {
+  background: transparent;
+}
+.page-template-page-joint-project .join-page .sidebar img {
+  border-radius: 12px;
+  max-width: 174px;
+}
+
 .slider-nav {
   position: absolute;
   top: 50%;

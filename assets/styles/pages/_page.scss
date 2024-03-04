@@ -112,3 +112,42 @@
     color: black;
   }
 }
+
+.page-template-page-joint-project {
+  .join-page {
+    .contactForm {
+      border-radius: 12px;
+      background: $lightGray;
+      margin-top: 40px;
+
+      @media (min-width: $tb_bp) {
+        padding: 72px;
+      }
+
+      h2 {
+        margin-bottom: 40px;
+      }
+
+      .form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .wpcf7-form {
+        .fields {
+          input:not([type="submit"]) {
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    .sidebar {
+      img {
+        border-radius: 12px;
+        max-width: 174px;
+      }
+    }
+
+  }
+}

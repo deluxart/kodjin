@@ -172,7 +172,7 @@ add_action( 'widgets_init', 'kodjin_widgets_init' );
  */
 function kodjin_scripts() {
 	wp_enqueue_style( 'kodjin-style', get_stylesheet_uri(), array(), _S_VERSION );
-    wp_enqueue_style( 'kodjin-styles', get_template_directory_uri() . '/assets/styles/styles.css?2201202444', array(), '2201202444' );
+    wp_enqueue_style( 'kodjin-styles', get_template_directory_uri() . '/assets/styles/styles.css?04032024', array(), '04032024' );
     wp_enqueue_style( 'kodjin-swiper', get_template_directory_uri() . '/assets/styles/libs/swiper.min.css', array(), _S_VERSION );
     wp_enqueue_style( 'kodjin-liMarquee', get_template_directory_uri() . '/assets/styles/libs/liMarquee.css', array(), _S_VERSION );
     wp_enqueue_style( 'kodjin-aos', get_template_directory_uri() . '/assets/styles/libs/aos.css', array(), _S_VERSION );
@@ -648,3 +648,12 @@ function enqueue_custom_block_script() {
 }
 
 add_action('enqueue_block_editor_assets', 'enqueue_custom_block_script');
+
+
+function shapeSpace_enable_gutenberg_post_ids($can_edit, $post) {
+    if (empty($post->ID)) return $can_edit;
+    if (5057 === $post->ID) return true;
+    return $can_edit;
+}
+
+add_filter('use_block_editor_for_post', 'shapeSpace_enable_gutenberg_post_ids', 10, 2);
