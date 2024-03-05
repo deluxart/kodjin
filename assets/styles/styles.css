@@ -2535,6 +2535,15 @@ h5 {
   border-radius: 12px;
   max-width: 174px;
 }
+@media (max-width: 768px) {
+  .page-template-page-joint-project .join-page .sidebar .whitepaper {
+    grid-template-columns: 1fr !important;
+  }
+  .page-template-page-joint-project .join-page .sidebar .whitepaper img {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
 
 .slider-nav {
   position: absolute;

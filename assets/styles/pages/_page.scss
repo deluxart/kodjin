@@ -147,6 +147,17 @@
         border-radius: 12px;
         max-width: 174px;
       }
+
+      .whitepaper {
+        @media (max-width: $sp_bp) {
+          grid-template-columns: 1fr !important;
+
+          img {
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+        }
+      }
     }
 
   }
