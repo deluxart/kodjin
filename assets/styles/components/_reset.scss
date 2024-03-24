@@ -46,6 +46,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #primary {
   padding: 140px 0 72px 0;
 
+  .page-head {
+    margin-bottom: 40px;
+  }
+
+  .entry-content, .entry-summary, .page-content {
+    margin: 0;
+  }
+
   &.insights {
     overflow: hidden;
   }
