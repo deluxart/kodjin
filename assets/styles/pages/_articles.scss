@@ -472,6 +472,22 @@
       grid-template-columns: minmax(0, 1fr) 430px;
     }
 
+    .entry-meta {
+      margin-bottom: 20px;
+    }
+
+    #table-of-contents {
+      &.hide {
+        display: none;
+      }
+
+     .toc-list {
+       display: grid;
+       gap: 10px;
+       font-size: 16px;
+     }
+    }
+
     .check_all_features {
       padding: 0;
 

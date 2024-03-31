@@ -37,7 +37,8 @@ $user_mail = get_field('mail', 'user_'. $user_id );
                     ?>
                     <div class="entry-meta">
                         <div class="date">
-                            <?php kodjin_posted_on(); ?>
+                            Posted: <?php kodjin_posted_on(); ?> |
+                            Updated: <?php echo get_the_modified_time('F j, Y'); ?>
                         </div>
                     </div><!-- .entry-meta -->
                 <?php endif; ?>
@@ -169,6 +170,8 @@ $user_mail = get_field('mail', 'user_'. $user_id );
                     </div>
                 </div>
             <?php endif; ?>
+            <div id="table-of-contents" class="card hide"></div>
+
 
         </div>
     </div>

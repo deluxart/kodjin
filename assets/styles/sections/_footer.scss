@@ -5,6 +5,13 @@
   position: relative;
   overflow: hidden;
 
+  .logo {
+    svg {
+      display: block;
+      max-width: 164px;
+    }
+  }
+
   @media (max-width: $tb_bp) {
     padding: 72px 0;
   }

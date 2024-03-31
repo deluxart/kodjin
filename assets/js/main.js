@@ -83,13 +83,20 @@ jQuery('.spoiler > .head').on('click', function(e){
 
 // Animate scroll on page
 jQuery(document).ready(function () {
-    jQuery('a[href*="#"]').on("click", function (e) {
+    // Добавляем класс "toc-link" ко всем ссылкам в блоке "table-of-contents"
+    jQuery('#table-of-contents a').addClass('toc-link');
+
+    // Отслеживаем клики по всем ссылкам, кроме тех, что в блоке "table-of-contents"
+    jQuery('a[href*="#"]').not('.toc-link').not('[href="#"]').not('[href="#0"]').on("click", function (e) {
         const anchor = jQuery(this);
-        jQuery('html, body').stop().animate({
-            scrollTop: jQuery(anchor.attr('href')).offset().top - 60
-        }, 777);
-        e.preventDefault();
-        return false;
+        // Проверяем, ссылка ли это на блок "table-of-contents"
+        if (anchor.attr('href').indexOf('#table-of-contents') === -1) {
+            jQuery('html, body').stop().animate({
+                scrollTop: jQuery(anchor.attr('href')).offset().top - 60
+            }, 777);
+            e.preventDefault();
+            return false;
+        }
     });
 });
 
@@ -335,3 +342,56 @@ jQuery(document).ready(function($) {
         placeholder: ''
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const tocContainer = document.getElementById('table-of-contents');
+    const entryContent = document.querySelector('.single-post .entry-content');
+    let headings;
+
+    if (entryContent) {
+        headings = entryContent.querySelectorAll('h2');
+
+        if (headings.length > 0) {
+            const tocList = document.createElement('ul');
+            tocList.classList.add('toc-list');
+
+            headings.forEach(function (heading, index) {
+                const headingId = 'toc-heading-' + index;
+                heading.setAttribute('id', headingId);
+
+                tocContainer.classList.remove("hide");
+
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.setAttribute('href', '#' + headingId);
+                link.textContent = heading.textContent;
+                listItem.appendChild(link);
+
+                tocList.appendChild(listItem);
+            });
+
+            tocContainer.appendChild(tocList);
+        }
+    }
+
+    tocContainer.addEventListener('click', function(event) {
+        if (event.target.tagName === 'A') {
+            event.preventDefault();
+
+            const targetId = event.target.getAttribute('href').slice(1);
+            const targetHeading = document.getElementById(targetId);
+            const offset = 70;
+            const fixedHeaderHeight = 70;
+            const additionalOffset = 0;
+
+            if (targetHeading) {
+                const targetPosition = targetHeading.getBoundingClientRect().top + window.pageYOffset - offset - fixedHeaderHeight - additionalOffset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+});
+
+
