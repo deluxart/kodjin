@@ -221,5 +221,62 @@ $user_mail = get_field('mail', 'user_'. $user_id );
         <?php } ?>
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tocContainer = document.getElementById('table-of-contents');
+            const entryContent = document.querySelector('.single-post .entry-content');
+            let headings;
+
+            if (entryContent) {
+                // Определяем список заголовков для включения в навигацию
+                const includeH3 = <?php echo get_field('include_h3_headings_in_navigation') == 1 ? 'true' : 'false'; ?>;
+
+                // Выбираем все заголовки h2 и, если нужно, h3
+                headings = entryContent.querySelectorAll('h2' + (includeH3 ? ', h3' : ''));
+
+                if (headings.length > 0) {
+                    const tocList = document.createElement('ul');
+                    tocList.classList.add('toc-list');
+
+                    headings.forEach(function(heading, index) {
+                        const headingId = 'toc-heading-' + index;
+                        heading.setAttribute('id', headingId);
+
+                        tocContainer.classList.remove("hide");
+
+                        const listItem = document.createElement('li');
+                        const link = document.createElement('a');
+                        link.setAttribute('href', '#' + headingId);
+                        link.textContent = heading.textContent;
+                        listItem.appendChild(link);
+
+                        tocList.appendChild(listItem);
+                    });
+
+                    tocContainer.appendChild(tocList);
+                }
+            }
+
+            tocContainer.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                    event.preventDefault();
+
+                    const targetId = event.target.getAttribute('href').slice(1);
+                    const targetHeading = document.getElementById(targetId);
+                    const offset = 70;
+                    const fixedHeaderHeight = 70;
+                    const additionalOffset = 0;
+
+                    if (targetHeading) {
+                        const targetPosition = targetHeading.getBoundingClientRect().top + window.pageYOffset - offset - fixedHeaderHeight - additionalOffset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
 
 </article><!-- #post-<?php the_ID(); ?> -->

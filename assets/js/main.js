@@ -342,56 +342,5 @@ jQuery(document).ready(function($) {
         placeholder: ''
     });
 });
-document.addEventListener("DOMContentLoaded", function() {
-    const tocContainer = document.getElementById('table-of-contents');
-    const entryContent = document.querySelector('.single-post .entry-content');
-    let headings;
-
-    if (entryContent) {
-        headings = entryContent.querySelectorAll('h2');
-
-        if (headings.length > 0) {
-            const tocList = document.createElement('ul');
-            tocList.classList.add('toc-list');
-
-            headings.forEach(function (heading, index) {
-                const headingId = 'toc-heading-' + index;
-                heading.setAttribute('id', headingId);
-
-                tocContainer.classList.remove("hide");
-
-                const listItem = document.createElement('li');
-                const link = document.createElement('a');
-                link.setAttribute('href', '#' + headingId);
-                link.textContent = heading.textContent;
-                listItem.appendChild(link);
-
-                tocList.appendChild(listItem);
-            });
-
-            tocContainer.appendChild(tocList);
-        }
-    }
-
-    tocContainer.addEventListener('click', function(event) {
-        if (event.target.tagName === 'A') {
-            event.preventDefault();
-
-            const targetId = event.target.getAttribute('href').slice(1);
-            const targetHeading = document.getElementById(targetId);
-            const offset = 70;
-            const fixedHeaderHeight = 70;
-            const additionalOffset = 0;
-
-            if (targetHeading) {
-                const targetPosition = targetHeading.getBoundingClientRect().top + window.pageYOffset - offset - fixedHeaderHeight - additionalOffset;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    });
-});
 
 
