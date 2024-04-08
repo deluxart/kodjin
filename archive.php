@@ -104,15 +104,15 @@ get_header();
                             if ($post_wallpaper) {
                                 ?>
                                 <div class="image">
-                                    <img src="<?php echo esc_url($post_wallpaper['url']); ?>" alt="<?php echo esc_attr($post_wallpaper['alt']); ?>" />
+                                    <a href="<?php the_permalink() ?>"><img src="<?php echo esc_url($post_wallpaper['url']); ?>" alt="<?php echo esc_attr($post_wallpaper['alt']); ?>" /></a>
                                 </div>
                             <?php } elseif( has_post_thumbnail() ) { ?>
                                 <div class="image">
-                                    <?php the_post_thumbnail(); ?>
+                                    <a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
                                 </div>
                             <?php } else { ?>
                                 <div class="image no-image">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog_no_img.jpg" alt="no-image" />
+                                    <a href="<?php the_permalink() ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog_no_img.jpg" alt="<?php the_title(); ?>" /></a>
                                 </div>
                             <?php } ?>
                             <a href="<?php the_permalink() ?>"><div class="title"><?php the_title(); ?></div></a>

@@ -50,11 +50,11 @@ get_header();
                                 <div class="image_wrap">
                             <?php if( $post_image_resources ) { ?>
                                 <div class="image">
-                                    <img src="<?php echo esc_url( $post_image_resources['url'] ); ?>" alt="<?php echo esc_attr( $post_image_resources['alt'] ); ?>" />
+                                    <a href="<?php the_permalink() ?>"><img src="<?php echo esc_url( $post_image_resources['url'] ); ?>" alt="<?php echo esc_attr( $post_image_resources['alt'] ); ?>" /></a>
                                 </div>
                             <?php } else { ?>
                                 <div class="image no-image">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog_no_img.jpg" alt="no-image" />
+                                    <a href="<?php the_permalink() ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/blog_no_img.jpg" alt="<?php the_title(); ?>" /></a>
                                 </div>
                             <?php } ?>
                                 <button class="slider-nav button-prev">
