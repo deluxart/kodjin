@@ -38,7 +38,17 @@ $user_mail = get_field('mail', 'user_'. $user_id );
                     <div class="entry-meta">
                         <div class="date">
                             Posted: <?php kodjin_posted_on(); ?> |
-                            Updated: <?php echo get_the_modified_time('F j, Y'); ?>
+                            <?php
+                            $modified_time = get_the_modified_time('F j, Y');
+                            $post_edit_date = get_field('post_edit_date');
+
+                            if (!empty($post_edit_date)) {
+                                echo 'Updated: ' . $post_edit_date;
+                            } else {
+                                echo 'Updated: ' . $modified_time;
+                            }
+                            ?>
+
                         </div>
                     </div><!-- .entry-meta -->
                 <?php endif; ?>
