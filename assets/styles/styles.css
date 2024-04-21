@@ -130,6 +130,10 @@ strong {
   margin-bottom: 32px;
 }
 
+.mb-24 {
+  margin-bottom: 24px;
+}
+
 ul.petal {
   display: grid;
   grid-gap: 20px;
@@ -3686,6 +3690,15 @@ h5 {
     padding: 32px;
   }
 }
+#solution_page #head_slide.healthcare .row .items {
+  display: grid;
+  gap: 16px;
+}
+@media (min-width: 992px) {
+  #solution_page #head_slide.healthcare .row .items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 #solution_page #head_slide.service {
   padding: 226px 0 138px 0;
 }
@@ -3810,6 +3823,9 @@ h5 {
 #solution_page #server_architecture {
   padding-bottom: 54px;
 }
+#solution_page #server_architecture.healthcare {
+  padding: 54px 0;
+}
 #solution_page #server_architecture .head h2 {
   margin-bottom: 24px;
 }
@@ -3827,6 +3843,31 @@ h5 {
 }
 #solution_page #server_in_context .scheme {
   margin-bottom: 16px;
+}
+@media (min-width: 992px) {
+  #solution_page #server_in_context.healthcare .head p {
+    font-size: 24px;
+  }
+}
+#solution_page #server_in_context.healthcare .descr {
+  margin-bottom: 24px;
+}
+@media (min-width: 992px) {
+  #solution_page #server_in_context.healthcare .descr {
+    font-size: 24px;
+    margin-bottom: 48px;
+  }
+}
+#solution_page #server_in_context.healthcare .cards.small {
+  margin-bottom: 24px;
+}
+@media (min-width: 992px) {
+  #solution_page #server_in_context.healthcare .cards.small {
+    margin-bottom: 48px;
+  }
+}
+#solution_page #server_in_context.healthcare .cards.small .tags li {
+  background: #fff;
 }
 #solution_page #explore_more {
   background: #F0F0F0;

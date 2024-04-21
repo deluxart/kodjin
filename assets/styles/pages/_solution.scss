@@ -69,6 +69,19 @@
       }
     }
 
+    &.healthcare {
+      .row {
+        .items {
+          display: grid;
+          gap: 16px;
+
+          @media (min-width: $tb_bp) {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }
+      }
+    }
+
     &.service {
       padding: 226px 0 138px 0;
 
@@ -214,6 +227,10 @@
   #server_architecture {
     padding-bottom: 54px;
 
+    &.healthcare {
+      padding: 54px 0;
+    }
+
     .head {
       h2 {
         margin-bottom: 24px;
@@ -237,6 +254,39 @@
 
     .scheme {
       margin-bottom: 16px;
+    }
+
+    &.healthcare {
+      .head {
+        p {
+          @media (min-width: $tb_bp) {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .descr {
+        margin-bottom: 24px;
+
+        @media (min-width: $tb_bp) {
+          font-size: 24px;
+          margin-bottom: 48px;
+        }
+      }
+
+      .cards {
+        &.small {
+          margin-bottom: 24px;
+
+          @media (min-width: $tb_bp) {
+            margin-bottom: 48px;
+          }
+
+          .tags li {
+            background: #fff;
+          }
+        }
+      }
     }
   }
 
