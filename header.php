@@ -109,6 +109,9 @@
 									<li role="menuitem">
 										<a class="dropdown-link" href="<?php echo get_home_url(); ?>/fhir-facade/">FHIR Facade</a>
 									</li>
+									<li role="menuitem">
+										<a class="dropdown-link" href="<?php echo get_home_url(); ?>/healthcare-elt-extensive-solution/">Healthcare ELT/ETL Extensive Solution</a>
+									</li>
 									<li class="dropdown-title">
 										<span class="dropdown-link-title">Free tools</span>
 									</li>
