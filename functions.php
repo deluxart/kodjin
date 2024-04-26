@@ -495,10 +495,10 @@ function set_data_attribute_for_cf7_forms() {
 
             setTimeout(() => {
                 const getClientId = function() {
-                    const trackers = ga.getAll();
+                    const trackers = gtag.getAll();
                     if (trackers.length > 0) {
-                        console.log(trackers[0].get('clientId'), 'clientId')
-                        return trackers[0].get('clientId');
+                        console.log(trackers[0].get('client_id'), 'clientId');
+                        return trackers[0].get('client_id');
                     }
                     return '';
                 };
@@ -538,28 +538,6 @@ function set_data_attribute_for_cf7_forms() {
                             inputField_timezone.setAttribute('data-name', dataNameAttribute);
                         }
 
-                        // if (inputField_countryVal) {
-                        //     if ("geolocation" in navigator) {
-                        //         navigator.geolocation.getCurrentPosition(function(position) {
-                        //             const latitude = position.coords.latitude;
-                        //             const longitude = position.coords.longitude;
-                        //
-                        //             fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`)
-                        //                 .then(response => response.json())
-                        //                 .then(data => {
-                        //                     const country = data.countryName;
-                        //                     inputField_countryVal.setAttribute('value',country);
-                        //                     inputField_countryVal.dataset.name = dataNameAttribute;
-                        //                 })
-                        //                 .catch(error => {
-                        //                     console.error("Error fetching location data:", error);
-                        //                 });
-                        //         });
-                        //     } else {
-                        //         console.log("Geolocation is not available in this browser.");
-                        //     }
-                        // }
-
                         if (inputField_countryVal) {
                             fetch('https://ipinfo.io/json')
                                 .then(response => response.json())
@@ -579,22 +557,22 @@ function set_data_attribute_for_cf7_forms() {
                         }
 
                         if (inputField_first_source) {
-                            inputField_first_source.setAttribute('value', `${sbjs.get.first.src} - ${sbjs.get.first.mdm} - ${sbjs.get.first.cmp} - ${sbjs.get.first.trm}`);
+                            inputField_first_source.setAttribute('value', `${sbjs?.get?.first?.src} - ${sbjs?.get?.first?.mdm} - ${sbjs?.get?.first?.cmp} - ${sbjs?.get?.first?.trm}`);
                             inputField_first_source.setAttribute('data-name', dataNameAttribute);
                         }
 
                         if (inputField_last_source) {
-                            inputField_last_source.setAttribute('value', `${sbjs.get.current.src} - ${sbjs.get.current.mdm} - ${sbjs.get.current.cmp} - ${sbjs.get.current.trm}`);
+                            inputField_last_source.setAttribute('value', `${sbjs?.get?.current?.src} - ${sbjs?.get?.current?.mdm} - ${sbjs?.get?.current?.cmp} - ${sbjs?.get?.current?.trm}`);
                             inputField_last_source.setAttribute('data-name', dataNameAttribute);
                         }
 
                         if (inputField_first_page) {
-                            inputField_first_page.setAttribute('value', sbjs.get.first_add.ep);
+                            inputField_first_page.setAttribute('value', sbjs?.get?.first_add?.ep);
                             inputField_first_page.setAttribute('data-name', dataNameAttribute);
                         }
 
                         if (inputField_last_landing_page) {
-                            inputField_last_landing_page.setAttribute('value', sbjs.get.current_add.ep);
+                            inputField_last_landing_page.setAttribute('value', sbjs?.get?.current_add?.ep);
                             inputField_last_landing_page.setAttribute('data-name', dataNameAttribute);
                         }
 
@@ -606,6 +584,7 @@ function set_data_attribute_for_cf7_forms() {
                 });
             }, 5000);
         });
+
     </script>
     <?php
     echo ob_get_clean();
