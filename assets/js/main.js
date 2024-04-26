@@ -25,20 +25,26 @@ jQuery(document).ready(function($){
 
 function ticker_checkScreenSize() {
     const screenWidth = window.innerWidth;
-
     const desktopBreakpoint = 992;
 
     const desktopContent = document.querySelector('.ticker_desktop-content');
     const mobileContent = document.querySelector('.ticker_mobile-content');
 
-    if (screenWidth >= desktopBreakpoint) {
-        desktopContent.style.display = 'block';
-        mobileContent.style.display = 'none';
-    } else {
-        desktopContent.style.display = 'none';
-        mobileContent.style.display = 'block';
+    if (desktopContent && mobileContent) {
+        if (screenWidth >= desktopBreakpoint) {
+            desktopContent.style.display = 'block';
+            mobileContent.style.display = 'none';
+        } else {
+            desktopContent.style.display = 'none';
+            mobileContent.style.display = 'block';
+        }
     }
 }
+
+// Вызываем функцию сразу при загрузке страницы и при изменении размера окна
+ticker_checkScreenSize();
+window.addEventListener('resize', ticker_checkScreenSize);
+
 
 window.addEventListener('load', ticker_checkScreenSize);
 window.addEventListener('resize', ticker_checkScreenSize);
