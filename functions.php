@@ -495,10 +495,10 @@ function set_data_attribute_for_cf7_forms() {
 
             setTimeout(() => {
                 const getClientId = function() {
-                    const trackers = gtag.getAll();
+                    const trackers = ga?.getAll();
                     if (trackers.length > 0) {
-                        console.log(trackers[0].get('client_id'), 'clientId');
-                        return trackers[0].get('client_id');
+                        console.log(trackers[0].get('clientId'), 'clientId')
+                        return trackers[0].get('clientId');
                     }
                     return '';
                 };
@@ -537,6 +537,28 @@ function set_data_attribute_for_cf7_forms() {
                             inputField_timezone.setAttribute('value', Intl.DateTimeFormat().resolvedOptions().timeZone);
                             inputField_timezone.setAttribute('data-name', dataNameAttribute);
                         }
+
+                        // if (inputField_countryVal) {
+                        //     if ("geolocation" in navigator) {
+                        //         navigator.geolocation.getCurrentPosition(function(position) {
+                        //             const latitude = position.coords.latitude;
+                        //             const longitude = position.coords.longitude;
+                        //
+                        //             fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`)
+                        //                 .then(response => response.json())
+                        //                 .then(data => {
+                        //                     const country = data.countryName;
+                        //                     inputField_countryVal.setAttribute('value',country);
+                        //                     inputField_countryVal.dataset.name = dataNameAttribute;
+                        //                 })
+                        //                 .catch(error => {
+                        //                     console.error("Error fetching location data:", error);
+                        //                 });
+                        //         });
+                        //     } else {
+                        //         console.log("Geolocation is not available in this browser.");
+                        //     }
+                        // }
 
                         if (inputField_countryVal) {
                             fetch('https://ipinfo.io/json')
@@ -584,7 +606,6 @@ function set_data_attribute_for_cf7_forms() {
                 });
             }, 5000);
         });
-
     </script>
     <?php
     echo ob_get_clean();
