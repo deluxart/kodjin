@@ -575,6 +575,52 @@
   }
 
   .entry-content {
+    .card {
+      border-radius: 24px;
+      background: $lightGray;
+      padding: 32px;
+    }
+
+    .author {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      p {
+        &.position {
+          margin-bottom: 12px;
+          font-size: 16px;
+        }
+      }
+
+      .photo {
+        img {
+          border-radius: 12px;
+          max-width: 174px;
+
+          @media (max-width: $tb_bp) {
+            max-width: 120px;
+          }
+        }
+      }
+
+      ul {
+        li {
+          padding-left: 0;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+
     .excerpt {
       padding: 20px 30px;
       background: $lightGray;

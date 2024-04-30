@@ -3051,6 +3051,40 @@ h5 {
 .single-post #page {
   overflow: clip;
 }
+.single-post .entry-content .card {
+  border-radius: 24px;
+  background: #F0F0F0;
+  padding: 32px;
+}
+.single-post .entry-content .author {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 24px;
+}
+.single-post .entry-content .author h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.single-post .entry-content .author p.position {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+.single-post .entry-content .author .photo img {
+  border-radius: 12px;
+  max-width: 174px;
+}
+@media (max-width: 992px) {
+  .single-post .entry-content .author .photo img {
+    max-width: 120px;
+  }
+}
+.single-post .entry-content .author ul li {
+  padding-left: 0;
+}
+.single-post .entry-content .author ul li:before {
+  display: none;
+}
 .single-post .entry-content .excerpt {
   padding: 20px 30px;
   background: #F0F0F0;

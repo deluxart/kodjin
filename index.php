@@ -92,6 +92,29 @@ $blog_id = get_option('page_for_posts', true);
                     </button>
                 </div>
             </section>
+            <section id="features_posts_latest" class="featured_posts">
+                <h3 class="mb-32" data-aos="fade-up"
+                    data-aos-easing="ease"
+                    data-aos-duration="1000"
+                    data-aos-delay="100">Latest Posts</h3>
+                <div class="articles">
+                    <div class="swiper-wrapper">
+                        <?php echo do_shortcode( '[recent_posts posts="5" link_icon="true" slides="true"]' ); ?>
+                    </div>
+                    <button class="slider-nav button-prev">
+                        <svg width="100%" height="100%" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="29" cy="29" r="27.5" transform="rotate(-180 29 29)" fill="white" stroke="black" stroke-width="3"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.674 29.3517L23.022 28.2079L32.0355 20.5601C32.6672 20.0241 33.6138 20.1017 34.1497 20.7334C34.6857 21.3651 34.6081 22.3116 33.9764 22.8476L26.3109 29.3517L33.9764 35.8558C34.6081 36.3918 34.6857 37.3383 34.1497 37.97C33.6138 38.6017 32.6672 38.6793 32.0355 38.1433L23.022 30.4955L21.674 29.3517Z" fill="black"/>
+                        </svg>
+                    </button>
+                    <button class="slider-nav button-next">
+                        <svg width="100%" height="100%" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="29" cy="29" r="27.5" fill="white" stroke="black" stroke-width="3"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M36.326 28.6483L34.978 29.7921L25.9645 37.4399C25.3328 37.9759 24.3862 37.8983 23.8503 37.2666C23.3143 36.6349 23.3919 35.6884 24.0236 35.1524L31.6891 28.6483L24.0236 22.1442C23.3919 21.6082 23.3143 20.6617 23.8503 20.03C24.3862 19.3983 25.3328 19.3207 25.9645 19.8567L34.978 27.5045L36.326 28.6483Z" fill="black"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
             <section class="updates_by_category">
                 <h3 class="mb-32" data-aos="fade-up"
                     data-aos-easing="ease"

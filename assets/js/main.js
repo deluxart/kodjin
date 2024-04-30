@@ -155,6 +155,18 @@ if (featuredScreens >= 1) {
     });
 }
 
+const featuredScreensLatest = jQuery('#features_posts_latest').length;
+if (featuredScreensLatest >= 1) {
+    const featuredSlider = new Swiper('#features_posts_latest .articles', {
+        slidesPerView: 'auto',
+        spaceBetween: 18,
+        navigation: {
+            nextEl: '#features_posts_latest .button-next',
+            prevEl: '#features_posts_latest .button-prev',
+        },
+    });
+}
+
 const kodjin_updatesScreens = jQuery('#kodjin_updates').length;
 if (kodjin_updatesScreens >= 1) {
     const featuredSlider = new Swiper('#kodjin_updates .articles', {
