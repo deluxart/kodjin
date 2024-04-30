@@ -207,11 +207,11 @@ $user_mail = get_field('mail', 'user_'. $user_id );
     if ($query->have_posts()) { ?>
     <section id="blog" class="blog_section">
         <div class="head mb-32">
-            <div>
-                <h2 data-aos="fade-up"
-                    data-aos-easing="ease"
-                    data-aos-duration="1000"
-                    data-aos-delay="100">More article about <?php echo esc_html($category_name); ?></h2>
+            <div data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="100">
+                <h2>More article about <?php echo esc_html($category_name); ?></h2>
             </div>
         </div>
 

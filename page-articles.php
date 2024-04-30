@@ -19,10 +19,12 @@ $categories = get_the_category();
                         <?php if(function_exists('bcn_display')) { bcn_display(); } ?>
                     </div>
                 </div>
-                <h2 data-aos="fade-up"
-                    data-aos-easing="ease"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"><?php the_title(); ?></h2>
+                <div data-aos="fade-up"
+                     data-aos-easing="ease"
+                     data-aos-duration="1000"
+                     data-aos-delay="200">
+                    <h2><?php the_title(); ?></h2>
+                </div>
             </div>
             <?php
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;

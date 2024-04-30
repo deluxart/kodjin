@@ -195,11 +195,11 @@ get_header();
 
                  <div class="other_whitepapers">
                      <div class="head mb-32">
-                         <div>
-                             <h2 data-aos="fade-up"
-                                 data-aos-easing="ease"
-                                 data-aos-duration="1000"
-                                 data-aos-delay="100">White Papers</h2>
+                         <div data-aos="fade-up"
+                              data-aos-easing="ease"
+                              data-aos-duration="1000"
+                              data-aos-delay="100">
+                             <h2>White Papers</h2>
                          </div>
                          <div data-aos="fade-left"
                               data-aos-easing="ease"
@@ -276,11 +276,11 @@ get_header();
             <section id="case_studies">
                 <div class="container">
                     <div class="head mb-32">
-                        <div>
-                            <h2 data-aos="fade-up"
-                                data-aos-easing="ease"
-                                data-aos-duration="1000"
-                                data-aos-delay="100">Case studies</h2>
+                        <div data-aos="fade-up"
+                             data-aos-easing="ease"
+                             data-aos-duration="1000"
+                             data-aos-delay="100">
+                            <h2>Case studies</h2>
                         </div>
                         <div data-aos="fade-left"
                              data-aos-easing="ease"

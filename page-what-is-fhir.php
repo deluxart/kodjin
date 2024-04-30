@@ -58,10 +58,12 @@ $section_bg_image = get_field( 'section_bg_image' );
         <section class="fhir_server">
             <div class="container">
                 <div class="head mb-32 tc">
-                    <h2 data-aos="fade-up"
-                        data-aos-easing="ease"
-                        data-aos-duration="1000"
-                        data-aos-delay="100"><?php the_field( 'section_title_guide_includes' ); ?></h2>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+                        <h2><?php the_field( 'section_title_guide_includes' ); ?></h2>
+                    </div>
                     <p data-aos="fade-up"
                        data-aos-easing="ease"
                        data-aos-duration="1000"
@@ -93,11 +95,11 @@ $section_bg_image = get_field( 'section_bg_image' );
         <section class="what_is_fhir_section">
             <div class="container">
                 <div class="row">
-                    <div>
-                        <h2 data-aos="fade-up"
-                            data-aos-easing="ease"
-                            data-aos-duration="1000"
-                            data-aos-delay="100"><?php the_field( 'section_title_what_is_fhir' ); ?></h2>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+                        <h2><?php the_field( 'section_title_what_is_fhir' ); ?></h2>
                     </div>
                     <?php if ( have_rows( 'cards_kodjin_what_is_fhir' ) ) : $ck_card = 1; ?>
                         <div>
@@ -151,10 +153,12 @@ $section_bg_image = get_field( 'section_bg_image' );
         <section id="why_fhir">
             <div class="container">
                 <div class="head mb-32 tc">
-                    <h2 data-aos="fade-up"
-                        data-aos-easing="ease"
-                        data-aos-duration="1000"
-                        data-aos-delay="100"><?php the_field( 'section_title_fhir_is_future' ); ?></h2>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+                        <h2><?php the_field( 'section_title_fhir_is_future' ); ?></h2>
+                    </div>
                     <p data-aos="fade-up"
                        data-aos-easing="ease"
                        data-aos-duration="1000"
@@ -210,11 +214,11 @@ $section_bg_image = get_field( 'section_bg_image' );
         <section id="after_reading" class="what_is_fhir_section">
             <div class="container">
                 <div class="row">
-                    <div>
-                        <h2 data-aos="fade-up"
-                            data-aos-easing="ease"
-                            data-aos-duration="1000"
-                            data-aos-delay="100"><?php the_field( 'section_title_after_reading' ); ?></h2>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+                        <h2><?php the_field( 'section_title_after_reading' ); ?></h2>
                     </div>
                     <div>
                         <?php if ( have_rows( 'items_after_reading' ) ) : $ar_i = 1; ?>
@@ -242,11 +246,11 @@ $section_bg_image = get_field( 'section_bg_image' );
         <section id="we_talk" class="what_is_fhir_section">
             <div class="container">
                 <div class="row">
-                    <div>
-                        <h2 data-aos="fade-up"
-                            data-aos-easing="ease"
-                            data-aos-duration="1000"
-                            data-aos-delay="100"><?php the_field( 'section_title_we_talk' ); ?></h2>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+                        <h2><?php the_field( 'section_title_we_talk' ); ?></h2>
                     </div>
                     <div>
                         <div class="text" data-aos="fade-up"
@@ -263,11 +267,11 @@ $section_bg_image = get_field( 'section_bg_image' );
 
         <section id="interoperability">
             <div class="container">
-                <div class="head tc mb-32">
-                    <h2 data-aos="fade-up"
-                        data-aos-easing="ease"
-                        data-aos-duration="1000"
-                        data-aos-delay="100"><?php the_field( 'section_title_interoperability' ); ?></h2>
+                <div class="head tc mb-32" data-aos="fade-up"
+                     data-aos-easing="ease"
+                     data-aos-duration="1000"
+                     data-aos-delay="100">
+                    <h2><?php the_field( 'section_title_interoperability' ); ?></h2>
                 </div>
                 <div class="cards">
                     <?php if ( have_rows( 'cards_interoperability' ) ) : $int_card = 1; ?>
@@ -341,11 +345,11 @@ $section_bg_image = get_field( 'section_bg_image' );
         <section id="blog" class="blog_section">
             <div class="container">
                 <div class="head mb-32">
-                    <div>
-                        <h2 data-aos="fade-up"
-                            data-aos-easing="ease"
-                            data-aos-duration="1000"
-                            data-aos-delay="100"><?php the_field( 'section_title_blog' ); ?></h2>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+                        <h2><?php the_field( 'section_title_blog' ); ?></h2>
                     </div>
                     <div data-aos="fade-left"
                          data-aos-easing="ease"
@@ -401,11 +405,11 @@ $section_bg_image = get_field( 'section_bg_image' );
         <section id="faq">
             <div class="container">
                 <div class="head mb-32">
-                    <div>
-                        <h2 data-aos="fade-up"
-                            data-aos-easing="ease"
-                            data-aos-duration="1000"
-                            data-aos-delay="100"><?php the_field( 'section_title_faq' ); ?></h2>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+                        <h2><?php the_field( 'section_title_faq' ); ?></h2>
                     </div>
 <!--                    <div data-aos="fade-left"-->
 <!--                         data-aos-easing="ease"-->

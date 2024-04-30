@@ -15,10 +15,12 @@ get_header();
                         <?php if(function_exists('bcn_display')) { bcn_display(); } ?>
                     </div>
                 </div>
-                <h2 data-aos="fade-up"
-                    data-aos-easing="ease"
-                    data-aos-duration="1000"
-                    data-aos-delay="200">Webinars</h2>
+                <div data-aos="fade-up"
+                     data-aos-easing="ease"
+                     data-aos-duration="1000"
+                     data-aos-delay="200">
+                    <h2>Webinars</h2>
+                </div>
             </div>
             <?php
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
@@ -79,10 +81,12 @@ get_header();
 
             <section id="features_posts" class="featured_posts">
                 <div class="head mb-32" style="display: grid;grid-template-columns: 1fr auto;align-items: center;">
-                    <h2 data-aos="fade-up" style="margin-bottom: 0"
-                        data-aos-easing="ease"
-                        data-aos-duration="1000"
-                        data-aos-delay="100">Latest Articles</h2>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+                        <h2 style="margin-bottom: 0">Latest Articles</h2>
+                    </div>
                     <div data-aos="fade-left"
                          data-aos-easing="ease"
                          data-aos-duration="1000"
@@ -129,11 +133,11 @@ get_header();
 
                 <div class="other_whitepapers">
                     <div class="head mb-32">
-                        <div>
-                            <h2 data-aos="fade-up"
-                                data-aos-easing="ease"
-                                data-aos-duration="1000"
-                                data-aos-delay="100">White Papers</h2>
+                        <div data-aos="fade-up"
+                              data-aos-easing="ease"
+                              data-aos-duration="1000"
+                              data-aos-delay="100">
+                            <h2>White Papers</h2>
                         </div>
                         <div data-aos="fade-left"
                              data-aos-easing="ease"

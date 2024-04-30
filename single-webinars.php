@@ -107,11 +107,11 @@ $post_slug = $post->post_name;
             <section id="latest-posts" class="latest_posts_section">
                 <div class="container">
                 <div class="head mb-32">
-                    <div>
-                        <h2 data-aos="fade-up"
-                            data-aos-easing="ease"
-                            data-aos-duration="1000"
-                            data-aos-delay="100">Latest Articles</h2>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+                        <h2>Latest Articles</h2>
                     </div>
                 </div>
 

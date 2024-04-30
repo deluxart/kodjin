@@ -96,10 +96,13 @@ $section_bg_image = get_field( 'section_bg_image' );
 		<section class="fhir_server">
 			<div class="container">
 				<div class="head mb-32 tc">
-					<h2 data-aos="fade-up"
-						data-aos-easing="ease"
-						data-aos-duration="1000"
-						data-aos-delay="100"><?php the_field( 'section_title_kodjin_fhir_server' ); ?></h2>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+					    <h2>
+                            <?php the_field( 'section_title_kodjin_fhir_server' ); ?></h2>
+                    </div>
 					<p data-aos="fade-up"
 					   data-aos-easing="ease"
 					   data-aos-duration="1000"
@@ -225,10 +228,12 @@ $section_bg_image = get_field( 'section_bg_image' );
 			<div class="container">
 				<div class="row">
 					<div class="head">
-						<h2 data-aos="fade-up"
-							data-aos-easing="ease"
-							data-aos-duration="1000"
-							data-aos-delay="100"><?php the_field( 'section_title_cases' ); ?></h2>
+                        <div data-aos="fade-up"
+                             data-aos-easing="ease"
+                             data-aos-duration="1000"
+                             data-aos-delay="100">
+						    <h2><?php the_field( 'section_title_cases' ); ?></h2>
+                        </div>
 						<p data-aos="fade-up"
 						   data-aos-easing="ease"
 						   data-aos-duration="1000"
@@ -289,11 +294,11 @@ $section_bg_image = get_field( 'section_bg_image' );
 
 		<section id="following_features">
 			<div class="container">
-				<div class="head tc mb-32">
-					<h2 data-aos="fade-up"
-						data-aos-easing="ease"
-						data-aos-duration="1000"
-						data-aos-delay="100"><?php the_field( 'section_title_include_following_features' ); ?></h2>
+				<div class="head tc mb-32" data-aos="fade-up"
+                     data-aos-easing="ease"
+                     data-aos-duration="1000"
+                     data-aos-delay="100">
+					<h2><?php the_field( 'section_title_include_following_features' ); ?></h2>
 				</div>
 				<div class="cards">
 					<?php if ( have_rows( 'cards_include_following_features' ) ) : $cif_is_card = 1; ?>
@@ -324,10 +329,12 @@ $section_bg_image = get_field( 'section_bg_image' );
 		<section id="explore_more">
 			<div class="container">
 				<div class="head tc mb-32">
-					<h2 data-aos="fade-up"
-						data-aos-easing="ease"
-						data-aos-duration="1000"
-						data-aos-delay="100"><?php the_field( 'section_title_explore_more' ); ?></h2>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+					    <h2><?php the_field( 'section_title_explore_more' ); ?></h2>
+                    </div>
 					<p data-aos="fade-up"
 					   data-aos-easing="ease"
 					   data-aos-duration="1000"
@@ -378,11 +385,11 @@ $section_bg_image = get_field( 'section_bg_image' );
 
 		<section id="why_choose">
 			<div class="container">
-				<div class="head">
-					<h2 data-aos="fade-up"
-						data-aos-easing="ease"
-						data-aos-duration="1000"
-						data-aos-delay="100"><?php the_field( 'section_title_why_choose_kodjin', 'option' ); ?></h2>
+				<div class="head" data-aos="fade-up"
+                     data-aos-easing="ease"
+                     data-aos-duration="1000"
+                     data-aos-delay="100">
+					<h2><?php the_field( 'section_title_why_choose_kodjin', 'option' ); ?></h2>
 				</div>
 				<?php if ( have_rows( 'cards_why_choose_kodjin', 'option' ) ) : $why_item = 1; ?>
 					<div class="items">
@@ -476,11 +483,11 @@ $section_bg_image = get_field( 'section_bg_image' );
 		<section id="case_studies">
 			<div class="container">
 				<div class="head mb-32">
-					<div>
-						<h2 data-aos="fade-up"
-							data-aos-easing="ease"
-							data-aos-duration="1000"
-							data-aos-delay="100"><?php the_field( 'section_title_case_studies' ); ?></h2>
+					<div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+						<h2><?php the_field( 'section_title_case_studies' ); ?></h2>
 					</div>
 					<div data-aos="fade-left"
 						 data-aos-easing="ease"
@@ -593,11 +600,11 @@ $section_bg_image = get_field( 'section_bg_image' );
 		<section id="blog" class="blog_section">
 			<div class="container">
 				<div class="head mb-32">
-					<div>
-						<h2 data-aos="fade-up"
-							data-aos-easing="ease"
-							data-aos-duration="1000"
-							data-aos-delay="100"><?php the_field( 'section_title_blog' ); ?></h2>
+					<div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+						<h2><?php the_field( 'section_title_blog' ); ?></h2>
 					</div>
 					<div data-aos="fade-left"
 						 data-aos-easing="ease"
@@ -679,11 +686,11 @@ $section_bg_image = get_field( 'section_bg_image' );
 		<section id="faq">
 			<div class="container">
 				<div class="head mb-32">
-					<div>
-						<h2 data-aos="fade-up"
-							data-aos-easing="ease"
-							data-aos-duration="1000"
-							data-aos-delay="100"><?php the_field( 'section_title_faq' ); ?></h2>
+					<div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="100">
+						<h2><?php the_field( 'section_title_faq' ); ?></h2>
 					</div>
 <!--					<div data-aos="fade-left"-->
 <!--						 data-aos-easing="ease"-->
