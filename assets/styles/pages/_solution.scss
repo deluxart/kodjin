@@ -257,6 +257,8 @@
     }
 
     &.healthcare {
+      background: #f1f1f1;
+
       .head {
         p {
           @media (min-width: $tb_bp) {
@@ -275,16 +277,14 @@
       }
 
       .cards {
-        &.small {
-          margin-bottom: 24px;
+        margin-bottom: 24px;
 
-          @media (min-width: $tb_bp) {
-            margin-bottom: 48px;
-          }
+        @media (min-width: $tb_bp) {
+          margin-bottom: 48px;
+        }
 
-          .tags li {
-            background: #fff;
-          }
+        .tags li {
+          background: #fff;
         }
       }
     }

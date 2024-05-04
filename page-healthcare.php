@@ -374,13 +374,13 @@ $section_bg_image = get_field( 'section_bg_image' );
                        data-aos-duration="1000"
                        data-aos-delay="200"><?php the_field( 'section_description_server_in_context' ); ?></p>
 				</div>
-                <div class="cards small">
+                <div class="cards">
                     <?php if ( have_rows( 'cards_server_in_context' ) ) : $scs = 1; ?>
                         <?php while ( have_rows( 'cards_server_in_context' ) ) : the_row(); $scs++; ?>
                             <div data-aos="fade-up"
                                  data-aos-easing="ease"
                                  data-aos-duration="1000"
-                                 data-aos-delay="<?php echo $scs;?>00" class="card gray">
+                                 data-aos-delay="<?php echo $scs;?>00" class="card">
                                 <div>
                                     <div class="cont">
                                         <?php if ( have_rows( 'tags' ) ) : ?>

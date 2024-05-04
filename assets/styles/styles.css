@@ -3878,6 +3878,9 @@ h5 {
 #solution_page #server_in_context .scheme {
   margin-bottom: 16px;
 }
+#solution_page #server_in_context.healthcare {
+  background: #f1f1f1;
+}
 @media (min-width: 992px) {
   #solution_page #server_in_context.healthcare .head p {
     font-size: 24px;
@@ -3892,15 +3895,15 @@ h5 {
     margin-bottom: 48px;
   }
 }
-#solution_page #server_in_context.healthcare .cards.small {
+#solution_page #server_in_context.healthcare .cards {
   margin-bottom: 24px;
 }
 @media (min-width: 992px) {
-  #solution_page #server_in_context.healthcare .cards.small {
+  #solution_page #server_in_context.healthcare .cards {
     margin-bottom: 48px;
   }
 }
-#solution_page #server_in_context.healthcare .cards.small .tags li {
+#solution_page #server_in_context.healthcare .cards .tags li {
   background: #fff;
 }
 #solution_page #explore_more {
