@@ -390,7 +390,10 @@ $section_bg_image = get_field( 'section_bg_image' );
                                             <?php endwhile; ?>
                                         </ul>
                                         <?php endif; ?>
-                                        <h4><?php the_sub_field( 'title' ); ?></h4>
+                                        <h3><?php the_sub_field( 'title' ); ?></h3>
+                                        <div class="text">
+                                            <?php the_sub_field( 'description' ); ?>
+                                        </div>
                                     </div>
                                     <a href="<?php the_sub_field( 'link' ); ?>" class="read">
                                         <svg width="100%" height="100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
