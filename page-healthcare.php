@@ -319,7 +319,7 @@ $section_bg_image = get_field( 'section_bg_image' );
                                  data-aos-delay="<?php echo $em_card; ?>00" class="card">
                                 <div>
                                     <div class="cont">
-                                        <?php $icon = get_sub_field( 'icon' ); ?>
+                                        <?php $icon = get_sub_field( 'card_icon' ); ?>
                                         <?php if ( $icon ) : ?>
                                             <div class="icon">
                                                 <img src="<?php echo esc_url( $icon['url'] ); ?>" alt="<?php echo esc_attr( $icon['alt'] ); ?>" />
