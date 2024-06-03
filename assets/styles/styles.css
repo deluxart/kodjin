@@ -381,10 +381,16 @@ ul.petal li:before {
   }
   #profilerInstructions .content .sidebar.active {
     transform: translateX(0);
+    z-index: 9999999999;
   }
   #profilerInstructions .content .sidebar .logo {
     display: block;
     margin-bottom: 30px;
+  }
+  #profilerInstructions .content .sidebar .logo img {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
   }
 }
 @media (min-width: 992px) {

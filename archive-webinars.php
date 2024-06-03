@@ -19,7 +19,7 @@ get_header();
                      data-aos-easing="ease"
                      data-aos-duration="1000"
                      data-aos-delay="200">
-                    <h2>Webinars</h2>
+                    <h1 class="heading">Webinars</h1>
                 </div>
             </div>
             <?php

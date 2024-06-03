@@ -431,11 +431,18 @@ ul {
 
         &.active {
           transform: translateX(0);
+          z-index: 9999999999;
         }
 
         .logo {
           display: block;
           margin-bottom: 30px;
+
+          img {
+            max-width: 150px;
+            margin: 0 auto;
+            display: block;
+          }
         }
       }
 

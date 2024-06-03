@@ -39,6 +39,16 @@
                                 <?php echo do_shortcode('[contact-form-7 id="b21ec70" title="Contact form_test"]'); ?>
                             </div>
                         </div>
+                    <?php elseif (is_page('Contact us')) : ?>
+                        <div class="wrapForm">
+                            <div class="head">
+                                <h1 class="heading">Let`s chat</h1>
+                                <p>We would be glad to share more details about our enterprise-level FHIR software solutions and other cases based on the HL7 FHIR standard.</p>
+                            </div>
+                            <div class="form kodjin_contact_from" data-name="contact_footer">
+                                <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form"]') ?>
+                            </div>
+                        </div>
                     <?php else : ?>
                     <div class="wrapForm">
                         <div class="head">
