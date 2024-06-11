@@ -98,7 +98,7 @@ $section_bg_image = get_field( 'section_bg_image' );
 				<?php endif; ?>
 		</section>
 
-		<?php if ( get_field( 'video_iframe_head' ) ) : ?>
+        <?php if ( ! have_rows( 'video_upload_head' ) && get_field( 'video_iframe_head' ) ) : ?>
 		<section id="video_block">
 			<div class="container">
 				<div class="youTube" data-aos="fade-up"
@@ -110,6 +110,29 @@ $section_bg_image = get_field( 'section_bg_image' );
 			</div>
 		</section>
 		<?php endif; ?>
+
+
+        <?php if ( have_rows( 'video_upload_head' ) ) : ?>
+            <?php while ( have_rows( 'video_upload_head' ) ) : the_row(); ?>
+                <?php $select_file_video_head = get_sub_field( 'selected_file_video_head' ); ?>
+                <?php $select_poster_video_head = get_sub_field( 'selected_poster_video_head' ); ?>
+                <?php if ( $select_file_video_head ) : ?>
+                    <section id="video_block">
+                        <div class="container">
+                            <div class="youTube" data-aos="fade-up"
+                                 data-aos-easing="ease"
+                                 data-aos-duration="1000"
+                                 data-aos-delay="100">
+                                <video preload="none" poster="<?php echo esc_url( $select_poster_video_head['url'] ); ?>" controls="true">
+                                    <source src="<?php echo esc_url( $select_file_video_head['url'] ); ?>" type="video/mp4" />
+<!--                                    <source src="" type="video/webm" />-->
+                                </video>
+                            </div>
+                        </div>
+                    </section>
+                <?php endif; ?>
+            <?php endwhile; ?>
+        <?php endif; ?>
 
 		<section class="fhir_server">
 			<div class="container">
