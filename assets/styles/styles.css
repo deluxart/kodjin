@@ -3822,6 +3822,23 @@ h5 {
   width: 100%;
   height: 100%;
 }
+#solution_page #video_block .wide {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+#solution_page #video_block .wide .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+#solution_page #video_block .wide video {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
 #solution_page .fhir_server {
   background: #F0F0F0;
   padding: 50px 0;

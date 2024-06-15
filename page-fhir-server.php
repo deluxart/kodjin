@@ -119,14 +119,20 @@ $section_bg_image = get_field( 'section_bg_image' );
                 <?php if ( $select_file_video_head ) : ?>
                     <section id="video_block">
                         <div class="container">
-                            <div class="youTube" data-aos="fade-up"
-                                 data-aos-easing="ease"
-                                 data-aos-duration="1000"
-                                 data-aos-delay="100">
+                            <div class="wide">
+                                <div class="content" data-aos="fade-up"
+                                     data-aos-easing="ease"
+                                     data-aos-duration="1000"
+                                     data-aos-delay="100">
+
                                 <video preload="none" poster="<?php echo esc_url( $select_poster_video_head['url'] ); ?>" controls="true">
                                     <source src="<?php echo esc_url( $select_file_video_head['url'] ); ?>" type="video/mp4" />
-<!--                                    <source src="" type="video/webm" />-->
+                                    <?php $select_file_for_mobile_webm = get_sub_field( 'select_file_for_mobile_webm' ); ?>
+                                    <?php if ( $select_file_for_mobile_webm ) : ?>
+                                        <source src="<?php echo esc_url( $select_file_for_mobile_webm['url'] ); ?>" type="video/webm" />
+                                    <?php endif; ?>
                                 </video>
+                                </div>
                             </div>
                         </div>
                     </section>

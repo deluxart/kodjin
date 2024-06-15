@@ -59,7 +59,7 @@ $attach_whitepaper = get_field('attach_whitepaper');
                             <?php if ( get_row_layout() == 'client_background' ) : ?>
                                 <section id="client_background" class="text_section">
                                     <?php if (get_sub_field( 'section_title_client_background' )) { ?>
-                                        <h2><?php the_sub_field( 'section_title_client_background' ); ?>></h2>
+                                        <h2><?php the_sub_field( 'section_title_client_background' ); ?></h2>
                                     <?php } ?>
                                     <div class="text">
                                         <?php the_sub_field( 'description_client_background' ); ?>
