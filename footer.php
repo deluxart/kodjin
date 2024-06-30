@@ -128,6 +128,11 @@
                 <p style="margin-top: 20px;font-size: 14px;max-width: 300px;">Address:
                     Vesivärava str. 50-201, 10152, Tallinn, Estonia</p>
 			</div>
+            <ul class="terms-links">
+                <li><a href="<?php echo do_shortcode('[site_url]'); ?>/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="<?php echo do_shortcode('[site_url]'); ?>/terms-of-use">Terms of service</a></li>
+                <li><a href="<?php echo do_shortcode('[site_url]'); ?>/web-accessibility-statement/">Web Accessibility Statement</a></li>
+            </ul>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
