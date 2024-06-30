@@ -43,7 +43,7 @@ get_header(); ?>
 
                 $categories_list = wp_list_categories($args);
 
-                if (is_category() || is_home() || is_page('insights') || is_page('news-events')) {
+                if (is_category() || is_home() || is_page('insights') || is_page('news-events') || is_page('blog')) {
                     $current_category_id = $current_category ? $current_category->term_id : 0;
                     $categories_list = str_replace('cat-item-all', 'cat-item-all current-cat', $categories_list);
                 }
