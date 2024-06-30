@@ -663,3 +663,16 @@ function shapeSpace_enable_gutenberg_post_ids($can_edit, $post) {
 }
 
 add_filter('use_block_editor_for_post', 'shapeSpace_enable_gutenberg_post_ids', 10, 2);
+
+function disable_blog_pagination($query) {
+    // Проверяем, что это не административная часть и главный запрос
+    if (!is_admin() && $query->is_main_query()) {
+        // Проверяем, что это страница блога и есть параметр 'paged'
+        if (is_home() && isset($query->query_vars['paged']) && $query->query_vars['paged'] > 1) {
+            // Перенаправляем на первую страницу блога
+            wp_redirect(get_permalink(get_option('page_for_posts')));
+            exit;
+        }
+    }
+}
+add_action('pre_get_posts', 'disable_blog_pagination');
