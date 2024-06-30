@@ -676,3 +676,14 @@ function disable_blog_pagination($query) {
     }
 }
 add_action('pre_get_posts', 'disable_blog_pagination');
+
+
+function add_page_number_to_document_title($title) {
+    // Проверяем, что это не административная часть и главный запрос
+    if (!is_admin() && is_paged()) {
+        $paged = get_query_var('paged');
+        $title .= ' - Page ' . $paged;
+    }
+    return $title;
+}
+add_filter('pre_get_document_title', 'add_page_number_to_document_title');
