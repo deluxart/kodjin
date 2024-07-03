@@ -92,7 +92,7 @@
 											Kodjin FHIR Server
 										</a>
                                         <ul class="submenu">
-                                            <li><a href="https://demo.kodjin.com/" target="_blank">Free Demo Server</a></li>
+<!--                                            <li><a href="https://demo.kodjin.com/" target="_blank">Free Demo Server</a></li>-->
                                             <li><a href="<?php echo get_home_url(); ?>/whitepapers/kodjin-performance-testing/">Performance</a></li>
                                         </ul>
 									</li>
