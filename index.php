@@ -20,14 +20,22 @@ $blog_id = get_option('page_for_posts', true);
                         <?php if(function_exists('bcn_display')) { bcn_display(); } ?>
                     </div>
                 </div>
-                <h1 data-aos="fade-up"
-                    data-aos-easing="ease"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"><?php echo get_the_title($blog_id); ?></h1>
-                <p data-aos="fade-up"
-                   data-aos-easing="ease"
-                   data-aos-duration="1000"
-                   data-aos-delay="300"><?php the_field( 'page_description_insights', $blog_id ); ?></p>
+                <div class="blog_head_with_search">
+                    <div>
+                        <h1 data-aos="fade-up"
+                            data-aos-easing="ease"
+                            data-aos-duration="1000"
+                            data-aos-delay="200"><?php echo get_the_title($blog_id); ?></h1>
+                        <p data-aos="fade-up"
+                           data-aos-easing="ease"
+                           data-aos-duration="1000"
+                           data-aos-delay="300"><?php the_field( 'page_description_insights', $blog_id ); ?></p>
+                    </div>
+                    <div data-aos="fade-up"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="400"><?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?></div>
+                </div>
                 <?php
                 $current_category = get_queried_object();
 

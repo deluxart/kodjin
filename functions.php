@@ -510,6 +510,7 @@ function set_data_attribute_for_cf7_forms() {
                     const dataFileUrl = form.getAttribute('data-file'); // Form name
                     const dataFileName = form.getAttribute('data-file-name'); // Form name
 
+
                     if (dataNameAttribute) {
                         const inputField_ID = form.querySelector('input[name="current-form-id"]'); // Current form ID
                         const inputField_timezone = form.querySelector('input[name="timezone"]'); // Current form timezone

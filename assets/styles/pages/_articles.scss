@@ -666,3 +666,20 @@
 
   }
 }
+
+
+.blog_head_with_search {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  align-items: flex-end;
+
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+
+  div.asl_m .probox .proinput {
+    margin: 0;
+  }
+}
