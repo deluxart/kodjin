@@ -20,7 +20,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="b4FiYY2WgoHiajQC" data-version="062024"></script>
 	<?php wp_head(); ?>
     <?php if ( have_rows( 'head_scripts', 'option' ) ) : ?>
         <?php while ( have_rows( 'head_scripts', 'option' ) ) : the_row(); ?>
