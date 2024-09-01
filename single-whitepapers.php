@@ -35,7 +35,10 @@ $post_slug = $post->post_name;
                             <img src="<?php echo esc_url( $wallpaper_whitepaper['url'] ); ?>" alt="<?php echo esc_attr( $wallpaper_whitepaper['alt'] ); ?>" />
                         </div>
                     <?php endif; ?>
-                    <?php $whitepaper_file = get_field( 'whitepaper_file' ); ?>
+                    <?php
+                        $whitepaper_file = get_field( 'whitepaper_file' );
+                        $title_whitepaper_mail = get_field('title_whitepaper_mail');
+                    ?>
                     <?php if ( $whitepaper_file ) : ?>
                         <a href="#wp_form" class="btn dark" data-aos="fade-up"
                            data-aos-easing="ease"
@@ -68,7 +71,11 @@ $post_slug = $post->post_name;
                 <div class="form">
                     <h2>Download Kodjin White Paper</h2>
                     <?php $whitepaper_form_id = get_field( 'whitepaper_form_id' ); ?>
-                    <div class="kodjin_contact_from" data-name="<?php if ( $whitepaper_form_id ) : ?><?php echo $whitepaper_form_id; ?><?php else: ?>wp_<?php echo $post_slug; ?><?php endif; ?>" data-file="<?php if ( $whitepaper_file ) : ?><?php the_field( 'whitepaper_file' ); ?><?php endif; ?>" data-file-name="<?php if ( $whitepaper_file ) : ?><?php the_field( 'title_whitepaper' ); ?><?php endif; ?>">
+                    <div class="kodjin_contact_from" data-name="<?php if ( $whitepaper_form_id ) : ?><?php echo $whitepaper_form_id; ?><?php else: ?>wp_<?php echo $post_slug; ?><?php endif; ?>" data-file="<?php if ( $whitepaper_file ) : ?><?php the_field( 'whitepaper_file' ); ?><?php endif; ?>" data-file-name="<?php if ( $whitepaper_file ) : ?><?php if ( $title_whitepaper_mail ) {
+                        echo esc_html( $title_whitepaper_mail );
+                    } else {
+                        the_field( 'title_whitepaper' );
+                    } ?><?php endif; ?>">
                         <?php echo do_shortcode('[contact-form-7 id="198" title="Kodjin White Paper"]') ?>
                     </div>
                 </div>
