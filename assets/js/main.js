@@ -362,3 +362,19 @@ jQuery(document).ready(function($) {
 });
 
 
+jQuery(document).ready(function($) {
+    $('#search-icon').on('click', function() {
+        $('#full-screen-search').fadeIn(500, function() {
+            $('.search-container').css('top', '-30%').show().animate({ top: '0%' }, 500);
+        });
+    });
+
+    $('#close-search, #full-screen-search').on('click', function(e) {
+        if ($(e.target).is('#full-screen-search') || $(e.target).is('#close-search')) {
+            $('.search-container').animate({ top: '-30%' }, 500, function() {
+                $(this).hide();
+                $('#full-screen-search').fadeOut(500);
+            });
+        }
+    });
+});

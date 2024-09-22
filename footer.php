@@ -237,6 +237,18 @@
 
 <div class="da-modal-open-bg"></div>
 
+<div id="full-screen-search">
+    <div class="search-container">
+        <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+        <div id="close-search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </div>
+    </div>
+</div>
+
+
 <?php wp_footer(); ?>
 
 <script>

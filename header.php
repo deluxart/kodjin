@@ -220,7 +220,11 @@
 						</li>
 					</ul>
 				</nav>
-
+                <div id="search-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M10 2a8 8 0 015.3 13.7l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/>
+                    </svg>
+                </div>
 				<a data-name="request_demo" class="da-modal btn white">Contact Us</a>
 			</div>
 		</div>

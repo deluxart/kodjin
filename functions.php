@@ -172,7 +172,7 @@ add_action( 'widgets_init', 'kodjin_widgets_init' );
  */
 function kodjin_scripts() {
 	wp_enqueue_style( 'kodjin-style', get_stylesheet_uri(), array(), _S_VERSION );
-    wp_enqueue_style( 'kodjin-styles', get_template_directory_uri() . '/assets/styles/styles.css?040320244444444444', array(), '040320244444444444' );
+    wp_enqueue_style( 'kodjin-styles', get_template_directory_uri() . '/assets/styles/styles.css?123', array(), '132' );
     wp_enqueue_style( 'kodjin-swiper', get_template_directory_uri() . '/assets/styles/libs/swiper.min.css', array(), _S_VERSION );
     wp_enqueue_style( 'kodjin-liMarquee', get_template_directory_uri() . '/assets/styles/libs/liMarquee.css', array(), _S_VERSION );
     wp_enqueue_style( 'kodjin-aos', get_template_directory_uri() . '/assets/styles/libs/aos.css', array(), _S_VERSION );
@@ -186,7 +186,7 @@ function kodjin_scripts() {
     wp_enqueue_script( 'kodjin-select2', get_template_directory_uri() . '/assets/js/libs/select2.min.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'kodjin-aos', get_template_directory_uri() . '/assets/js/libs/aos.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'kodjin-megamenu', get_template_directory_uri() . '/assets/js/megamenu.js', array(), _S_VERSION, true );
-    wp_enqueue_script( 'kodjin-main', get_template_directory_uri() . '/assets/js/main.js?1112202344', array(), '1112202344', true );
+    wp_enqueue_script( 'kodjin-main', get_template_directory_uri() . '/assets/js/main.js?22', array(), '212', true );
     wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/custom-script.js', array(), '090108023', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
