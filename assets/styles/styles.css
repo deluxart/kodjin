@@ -20,11 +20,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-family: "Montserrat", serif;
 }
 
-.whitepaper-single .content ul, .case-single .content_block ul, #primary .entry-content ul {
+.whitepaper-single .content ul, .case-single .content_block ul, #primary .entry-content ul, body:not(.single-post) ul {
   padding-left: 18px;
   list-style: disc;
 }
-.whitepaper-single .content ol, .case-single .content_block ol, #primary .entry-content ol {
+.whitepaper-single .content ol, .case-single .content_block ol, #primary .entry-content ol, body:not(.single-post) ol {
   padding-left: 18px;
   list-style: decimal;
 }
