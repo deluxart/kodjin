@@ -214,6 +214,8 @@
   input {
     &[type="submit"] {
       margin-top: 40px;
+      //padding-top: 0;
+      //padding-bottom: 0;
 
       @media (min-width: $tb_bp) {
         margin-top: 56px;

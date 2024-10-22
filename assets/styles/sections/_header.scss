@@ -23,7 +23,7 @@
     }
 
     @media (max-width: $tb_bp) {
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 1fr auto auto;
       height: 90px;
     }
 
