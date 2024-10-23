@@ -1,0 +1,8 @@
+[12-Oct-2024 10:00:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/kodjinco/public_html/wp-content/themes/kodjin/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /home2/kodjinco/public_html/wp-content/themes/kodjin/index.php on line 6
+[12-Oct-2024 10:02:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home2/kodjinco/public_html/wp-content/themes/kodjin/index.php:6
+Stack trace:
+#0 {main}
+  thrown in /home2/kodjinco/public_html/wp-content/themes/kodjin/index.php on line 6

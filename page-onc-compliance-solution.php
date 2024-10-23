@@ -378,7 +378,7 @@ $section_bg_image = get_field( 'section_bg_image' );
                                         <?php while ( have_rows( 'tag' ) ) : the_row(); ?>
                                             <?php $icon = get_sub_field( 'icon' ); ?>
                                             <?php if ( $icon ) : ?>
-                                                <div class="tag_wrap">
+                                                <div class="tag_wrap <?php if ( get_sub_field( 'icon_position' ) == 1 ) : ?>right<?php endif; ?>">
                                                     <img src="<?php echo esc_url( $icon['url'] ); ?>" alt="<?php echo esc_attr( $icon['alt'] ); ?>" />
                                                     <span><?php the_sub_field( 'title' ); ?></span>
                                                 </div>
@@ -405,14 +405,15 @@ $section_bg_image = get_field( 'section_bg_image' );
                                     <div class="cont">
                                         <h3><?php the_sub_field( 'title' ); ?></h3>
                                         <p><?php the_sub_field( 'description' ); ?></p>
+                                        <?php if ( get_sub_field( 'add_button' ) == 1 ) : ?>
                                         <?php if ( have_rows( 'button' ) ) : ?>
                                             <?php while ( have_rows( 'button' ) ) : the_row(); ?>
-                                                <?php $link = get_sub_field( 'link' ); ?>
-                                                <?php if ( $link ) : ?>
+
                                                 <a href="<?php the_sub_field( 'link' ); ?>" class="btn dark border"><?php the_sub_field( 'title' ); ?></a>
-                                                <?php endif; ?>
+
                                             <?php endwhile; ?>
                                         <?php endif; ?>
+                                    <?php endif; ?>
                                     </div>
                                 </div>
                                 <?php endwhile; ?>

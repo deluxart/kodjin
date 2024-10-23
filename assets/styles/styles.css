@@ -6021,6 +6021,9 @@ h5 {
   border-radius: 30px;
   color: #000;
 }
+.onc_solution #roadmap .wrap_content .cards .card .tag_wrap.right {
+  flex-direction: row-reverse;
+}
 .onc_solution #roadmap .wrap_content .description_block {
   font-weight: 600;
   padding: 40px;

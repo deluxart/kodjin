@@ -523,6 +523,10 @@
               padding-right: 12px;
               border-radius: 30px;
               color: #000;
+
+              &.right {
+                flex-direction: row-reverse;
+              }
             }
           }
         }
