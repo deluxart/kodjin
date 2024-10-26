@@ -506,10 +506,12 @@
         }
 
         .card {
-          display: grid;
+          display: flex;
           gap: 12px;
           min-height: 0;
           padding: 0;
+          align-items: flex-start;
+          flex-direction: column;
 
           .tag {
             height: 26px;

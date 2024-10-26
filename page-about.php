@@ -71,12 +71,12 @@ $section_bg_image = get_field( 'section_bg_image' );
                     data-aos-duration="1000"
                     data-aos-delay="100"><?php the_field( 'section_title_partners' ); ?></h2>
             </div>
-            <?php if ( have_rows( 'partners_head' ) ) : ?>
+            <?php if ( have_rows( 'partners_head', 'option' ) ) : ?>
                 <div class="logos mWrap" data-aos="fade-up"
                      data-aos-easing="ease"
                      data-aos-duration="1000"
                      data-aos-delay="200">
-                    <?php while ( have_rows( 'partners_head' ) ) : the_row(); ?>
+                    <?php while ( have_rows( 'partners_head', 'option' ) ) : the_row(); ?>
                         <?php $logo = get_sub_field( 'logo' ); ?>
                         <?php if ( $logo ) : ?>
                             <img src="<?php echo esc_url( $logo['url'] ); ?>" style="opacity: 1;" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />

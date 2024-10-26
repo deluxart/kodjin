@@ -81,9 +81,9 @@ $section_bg_image = get_field( 'section_bg_image' );
 		</section>
 
 		<section id="partners_head">
-				<?php if ( have_rows( 'partners_head' ) ) : ?>
+				<?php if ( have_rows( 'partners_head', 'option' ) ) : ?>
 					<div class="logos mWrap">
-						<?php while ( have_rows( 'partners_head' ) ) : the_row(); ?>
+						<?php while ( have_rows( 'partners_head', 'option' ) ) : the_row(); ?>
 							<?php $logo = get_sub_field( 'logo' ); ?>
 							<?php if ( $logo ) : ?>
 								<img src="<?php echo esc_url( $logo['url'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />

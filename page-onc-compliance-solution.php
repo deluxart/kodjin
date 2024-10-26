@@ -294,7 +294,7 @@ $section_bg_image = get_field( 'section_bg_image' );
                         <?php endif; ?>
                     <?php endwhile; ?>
                 <?php endif; ?>
-                <section id="check_all_features" class="check_all_features" style="cursor: pointer;" onclick="window.location.href = '<?php echo get_home_url(); ?>/whitepapers/the-ultimate-guide-to-fhir/'; return false;">
+                <section id="check_all_features" class="check_all_features" style="cursor: pointer;" onclick="window.location.href = '<?php echo get_home_url(); ?>/whitepapers/fhir-based-enterprise-level-tools-for-healthcare-data-management/'; return false;">
                     <div class="image">
                         <img data-aos="fade-left"
                              data-aos-easing="ease"
@@ -324,7 +324,6 @@ $section_bg_image = get_field( 'section_bg_image' );
                     <h2><?php the_field( 'section_title_edenlabs_experts' ); ?></h2>
                     <p><?php the_field( 'section_description_edenlabs_experts' ); ?></p>
                 </div>
-
 
                 <div class="cards">
                     <?php if ( have_rows( 'section_cards_edenlabs_experts' ) ) : $f_is_card = 1; ?>

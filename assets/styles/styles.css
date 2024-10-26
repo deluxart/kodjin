@@ -6004,10 +6004,12 @@ h5 {
   }
 }
 .onc_solution #roadmap .wrap_content .cards .card {
-  display: grid;
+  display: flex;
   gap: 12px;
   min-height: 0;
   padding: 0;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .onc_solution #roadmap .wrap_content .cards .card .tag {
   height: 26px;
