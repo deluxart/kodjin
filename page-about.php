@@ -445,6 +445,60 @@ $section_bg_image = get_field( 'section_bg_image' );
             </div>
         </section>
 
+        <section id="whitepapers_about">
+            <div class="container">
+                <div class="head mb-32">
+                    <h2 data-aos="fade-up"
+                        data-aos-easing="ease"
+                        data-aos-duration="1000"
+                        data-aos-delay="100"><?php the_field( 'section_title_whitepapers' ); ?></h2>
+                </div>
+                <div class="blocks">
+                    <?php if ( have_rows( 'block_kodjin_interoperability_suite' ) ) : ?>
+                        <div class="block first">
+                            <?php while ( have_rows( 'block_kodjin_interoperability_suite' ) ) : the_row(); ?>
+                                <div>
+                                    <?php $block_image = get_sub_field( 'block_image' ); ?>
+                                    <?php if ( $block_image ) : ?>
+                                        <img src="<?php echo esc_url( $block_image['url'] ); ?>" alt="<?php echo esc_attr( $block_image['alt'] ); ?>" />
+                                    <?php endif; ?>
+                                </div>
+                                <div>
+                                    <span class="tag"><?php the_sub_field( 'tag' ); ?></span>
+                                    <h3><?php the_sub_field( 'title' ); ?></h3>
+                                    <?php $download_link = get_sub_field( 'download_link' ); ?>
+                                    <?php if ( $download_link ) : ?>
+                                        <a href="<?php echo esc_url( $download_link); ?>" class="btn dark">Download</a>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <?php if ( have_rows( 'block_the_ultimate_guide_to_fhir' ) ) : ?>
+                        <div class="block second">
+                            <?php while ( have_rows( 'block_the_ultimate_guide_to_fhir' ) ) : the_row(); ?>
+                                <div>
+                                    <?php $block_image = get_sub_field( 'image' ); ?>
+                                    <?php if ( $block_image ) : ?>
+                                        <img src="<?php echo esc_url( $block_image['url'] ); ?>" alt="<?php echo esc_attr( $block_image['alt'] ); ?>" />
+                                    <?php endif; ?>
+                                </div>
+                                <div>
+                                    <span class="tag"><?php the_sub_field( 'tag' ); ?></span>
+                                    <h3><?php the_sub_field( 'title' ); ?></h3>
+                                    <?php $download_link = get_sub_field( 'download_link' ); ?>
+                                    <?php if ( $download_link ) : ?>
+                                        <a href="<?php echo esc_url( $download_link); ?>" class="btn dark">Download</a>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </section>
+
         <section id="blog" class="blog_section">
             <div class="container">
                 <div class="head mb-32">
