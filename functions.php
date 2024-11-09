@@ -539,28 +539,6 @@ function set_data_attribute_for_cf7_forms() {
                             inputField_timezone.setAttribute('data-name', dataNameAttribute);
                         }
 
-                        // if (inputField_countryVal) {
-                        //     if ("geolocation" in navigator) {
-                        //         navigator.geolocation.getCurrentPosition(function(position) {
-                        //             const latitude = position.coords.latitude;
-                        //             const longitude = position.coords.longitude;
-                        //
-                        //             fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`)
-                        //                 .then(response => response.json())
-                        //                 .then(data => {
-                        //                     const country = data.countryName;
-                        //                     inputField_countryVal.setAttribute('value',country);
-                        //                     inputField_countryVal.dataset.name = dataNameAttribute;
-                        //                 })
-                        //                 .catch(error => {
-                        //                     console.error("Error fetching location data:", error);
-                        //                 });
-                        //         });
-                        //     } else {
-                        //         console.log("Geolocation is not available in this browser.");
-                        //     }
-                        // }
-
                         if (inputField_countryVal) {
                             fetch('https://ipinfo.io/json')
                                 .then(response => response.json())

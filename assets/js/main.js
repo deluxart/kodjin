@@ -237,11 +237,29 @@ if (testimonialsScreens >= 1) {
 }
 
 // CF7 - Options
-document.addEventListener( 'wpcf7mailsent', function( event ) {
+document.addEventListener('wpcf7mailsent', function(event) {
     const unitTag = event.detail.unitTag;
-    jQuery(`#${unitTag}`).closest('.wrapForm').hide();
+    const wrapForm = jQuery(`#${unitTag}`).closest('.wrapForm');
+
+    const pdfInput = wrapForm.find('input.pdf_file');
+
+    wrapForm.hide();
     jQuery(`#${unitTag}`).closest('.contactForm').find('.successForm').show();
-}, false );
+
+    if (pdfInput.length) {
+        const pdfUrl = pdfInput.val();
+
+        if (pdfUrl && (pdfUrl.startsWith('http://') || pdfUrl.startsWith('https://'))) {
+            const link = document.createElement('a');
+            link.href = pdfUrl;
+            link.download = '';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    }
+}, false);
+
 
 jQuery('.wpcf7 input, .wpcf7 textarea').on('focusin', function(){
     jQuery(this).parents('label').addClass('active');
