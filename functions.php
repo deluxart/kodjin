@@ -186,7 +186,7 @@ function kodjin_scripts() {
     wp_enqueue_script( 'kodjin-select2', get_template_directory_uri() . '/assets/js/libs/select2.min.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'kodjin-aos', get_template_directory_uri() . '/assets/js/libs/aos.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'kodjin-megamenu', get_template_directory_uri() . '/assets/js/megamenu.js', array(), _S_VERSION, true );
-    wp_enqueue_script( 'kodjin-main', get_template_directory_uri() . '/assets/js/main.js?22', array(), '212', true );
+    wp_enqueue_script( 'kodjin-main', get_template_directory_uri() . '/assets/js/main.js?223', array(), '2123', true );
     wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/custom-script.js', array(), '090108023', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
