@@ -308,7 +308,7 @@ $section_bg_image = get_field( 'section_bg_image' );
                         <div>
                             <div class="tag">White paper</div>
                         </div>
-                        <h2>Download Kodjin Interoperability Suite</h2>
+                        <h2>Download Kodjin Interoperability Suite White Paper</h2>
                         <div class="actions">
                             <a href="<?php echo get_home_url(); ?>/whitepapers/fhir-based-enterprise-level-tools-for-healthcare-data-management/" class="btn white">Download</a>
                         </div
