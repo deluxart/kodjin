@@ -382,36 +382,8 @@
         gap: 10px;
       }
 
-      .tag {
-        border: 1px solid #fff;
-        display: inline-flex;
-        font-size: 12px;
-        height: 26px;
-        align-items: center;
-        padding-left: 12px;
-        padding-right: 12px;
-        color: #fff;
-        border-radius: 30px;
-      }
-
       h2 {
         max-width: 650px;
-      }
-
-      .image {
-        position: absolute;
-        z-index: 1;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-
-        @media (max-width: $tb_bp) {
-          display: none;
-        }
-
-        img {
-          max-width: 510px;
-        }
       }
     }
   }

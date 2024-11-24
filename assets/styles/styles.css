@@ -4784,6 +4784,32 @@ h5 {
 .check_all_features {
   position: relative;
 }
+.check_all_features .tag {
+  border: 1px solid #fff;
+  display: inline-flex;
+  font-size: 12px;
+  height: 26px;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: #fff;
+  border-radius: 30px;
+}
+.check_all_features .image {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 992px) {
+  .check_all_features .image {
+    display: none;
+  }
+}
+.check_all_features .image img {
+  max-width: 510px;
+}
 .check_all_features .linkBlock {
   position: absolute !important;
   content: "";
@@ -4845,6 +4871,20 @@ h5 {
 @media (max-width: 768px) {
   .check_all_features .block .actions {
     flex-direction: column;
+  }
+}
+.check_all_features.fhir_server_block {
+  margin-top: 50px;
+}
+.check_all_features.fhir_server_block .block {
+  gap: 20px;
+}
+.check_all_features.fhir_server_block .block p {
+  max-width: 759px;
+}
+@media (max-width: 1400px) {
+  .check_all_features.fhir_server_block .block h2, .check_all_features.fhir_server_block .block p {
+    max-width: 560px;
   }
 }
 
@@ -5891,34 +5931,8 @@ h5 {
 .onc_solution #potential_of_fhir .check_all_features .block {
   gap: 10px;
 }
-.onc_solution #potential_of_fhir .check_all_features .tag {
-  border: 1px solid #fff;
-  display: inline-flex;
-  font-size: 12px;
-  height: 26px;
-  align-items: center;
-  padding-left: 12px;
-  padding-right: 12px;
-  color: #fff;
-  border-radius: 30px;
-}
 .onc_solution #potential_of_fhir .check_all_features h2 {
   max-width: 650px;
-}
-.onc_solution #potential_of_fhir .check_all_features .image {
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-@media (max-width: 992px) {
-  .onc_solution #potential_of_fhir .check_all_features .image {
-    display: none;
-  }
-}
-.onc_solution #potential_of_fhir .check_all_features .image img {
-  max-width: 510px;
 }
 .onc_solution #edenlab_experts {
   background: #F0F0F0;

@@ -779,6 +779,30 @@ $section_bg_image = get_field( 'section_bg_image' );
 			</div>
 		</section>
 
+        <div class="container">
+            <section id="check_all_features" class="check_all_features fhir_server_block" style="cursor: pointer;" onclick="window.location.href = '<?php echo get_home_url(); ?>/whitepapers/the-ultimate-guide-to-fhir/'; return false;">
+                <div class="image">
+                    <img data-aos="fade-left"
+                         data-aos-easing="ease"
+                         data-aos-duration="1000"
+                         data-aos-delay="200" src="https://kodjin.com/wp-content/uploads/2024/11/image.png" alt="" />
+                </div>
+                <div class="block" data-aos="fade-up"
+                     data-aos-easing="ease"
+                     data-aos-duration="1000"
+                     data-aos-delay="100">
+                    <div>
+                        <div class="tag">White paper</div>
+                    </div>
+                    <h2>The Only Guide you Will Need</h2>
+                    <p>The “Ultimate FHIR Guide” was designed by Edenlab to provide insights into the world of FHIR and its vast potential for ensuring healthcare interoperability.</p>
+                    <div class="actions">
+                        <a href="<?php echo get_home_url(); ?>/whitepapers/the-ultimate-guide-to-fhir/" class="btn white">Download</a>
+                    </div
+                </div>
+            </section>
+        </div>
+
         <?php
             $webinars_title = get_field( 'section_title_webinars' );
             echo do_shortcode('[webinars-list posts="6" order="date" title="' . $webinars_title . '"]')
