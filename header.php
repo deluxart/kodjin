@@ -201,6 +201,9 @@
                                     <li role="menuitem">
                                         <a class="dropdown-link" href="<?php echo get_home_url(); ?>/news-events/">News and Events</a>
                                     </li>
+                                    <li role="menuitem">
+                                        <a class="dropdown-link" href="https://docs.kodjin.com/" target="_blank">Documentation</a>
+                                    </li>
 								</ul>
                                 <div class="side">
                                     <a href="<?php echo get_home_url(); ?>/blog/"><span class="insights">Insights</span></a>
@@ -211,13 +214,13 @@
                                         <li><a href="<?php echo get_home_url(); ?>/blog/category/kodjin-updates/">Kodjin Updates</a></li>
                                         <li><a href="<?php echo get_home_url(); ?>/blog/category/healthcare/">Healthcare</a></li>
                                     </ul>
-                                    <span class="dropdown-link-title">Kodjin Documentation</span>
-                                    <a href="https://docs.kodjin.com/" class="git" target="_blank">
-                                        <span>Docs on Github</span>
-                                        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4242 1.49324L10.4723 0.905927L9.88502 0.954067L4.13303 1.42554C3.85781 1.4481 3.65299 1.6895 3.67555 1.96472C3.69811 2.23994 3.9395 2.44476 4.21472 2.4222L8.60958 2.06197L0.283962 10.3876C0.0886994 10.5828 0.0886999 10.8994 0.283962 11.0947C0.479224 11.29 0.795806 11.29 0.991069 11.0947L9.31622 2.76954L8.95606 7.16354C8.9335 7.43876 9.13832 7.68015 9.41354 7.70271C9.68876 7.72527 9.93016 7.52045 9.95272 7.24523L10.4242 1.49324Z" fill="black"/>
-                                        </svg>
-                                    </a>
+<!--                                    <span class="dropdown-link-title">Kodjin Documentation</span>-->
+<!--                                    <a href="https://docs.kodjin.com/" class="git" target="_blank">-->
+<!--                                        <span>Docs on Github</span>-->
+<!--                                        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4242 1.49324L10.4723 0.905927L9.88502 0.954067L4.13303 1.42554C3.85781 1.4481 3.65299 1.6895 3.67555 1.96472C3.69811 2.23994 3.9395 2.44476 4.21472 2.4222L8.60958 2.06197L0.283962 10.3876C0.0886994 10.5828 0.0886999 10.8994 0.283962 11.0947C0.479224 11.29 0.795806 11.29 0.991069 11.0947L9.31622 2.76954L8.95606 7.16354C8.9335 7.43876 9.13832 7.68015 9.41354 7.70271C9.68876 7.72527 9.93016 7.52045 9.95272 7.24523L10.4242 1.49324Z" fill="black"/>-->
+<!--                                        </svg>-->
+<!--                                    </a>-->
                                 </div>
 							</div>
 						</li>
