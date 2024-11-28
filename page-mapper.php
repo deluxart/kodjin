@@ -635,7 +635,7 @@ $section_bg_image = get_field( 'section_bg_image' );
                     <img data-aos="fade-left"
                          data-aos-easing="ease"
                          data-aos-duration="1000"
-                         data-aos-delay="200" src="https://kodjin.com/wp-content/uploads/2024/11/image.png" alt="" />
+                         data-aos-delay="200" src="https://kodjin.com/wp-content/uploads/2024/11/image2.png" alt="" />
                 </div>
                 <div class="block" data-aos="fade-up"
                      data-aos-easing="ease"
