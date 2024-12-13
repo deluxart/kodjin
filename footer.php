@@ -182,7 +182,7 @@
 							<h2>The Ultimate Guide <br/>to FHIR</h2>
 							<p>The Only Guide You Will Need</p>
 						</div>
-                        <div class="form kodjin_contact_from" data-name="<?php if ( is_page_template('page-what-is-fhir.php') ) { ?>wp_guide<?php } else { ?>ultimate_guide_to_FHIR<?php } ?>" data-file="https://kodjin.com/wp-content/uploads/2023/07/fin_ultimate-guide-to-fhir.pdf" data-file-name="The Ultimate Guide to FHIR">
+                        <div class="form kodjin_contact_from" data-name="<?php if ( is_page_template('page-what-is-fhir.php') ) { ?>wp_guide<?php } else { ?>ultimate_guide_to_FHIR<?php } ?>" data-file="https://kodjin.com/wp-content/uploads/2024/07/ultimate-guide-to-fhir-11-24.pdf" data-file-name="The Ultimate Guide to FHIR">
 							<?php echo do_shortcode('[contact-form-7 id="198" title="Kodjin White Paper"]') ?>
 						</div>
 					</div>
