@@ -175,7 +175,7 @@
 				<div class="contactForm white_paper">
 				<div class="wrapForm">
 					<div class="image">
-						<img src="/wp-content/uploads/2023/08/fhir_walp.png" style="max-width: 400px;" alt="The Ultimate Guide to FHIR" />
+						<img src="/wp-content/uploads/2024/11/image2.png" style="max-width: 400px;" alt="The Ultimate Guide to FHIR" />
 					</div>
 					<div>
 						<div class="head">
