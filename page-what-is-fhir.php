@@ -126,12 +126,16 @@ $section_bg_image = get_field( 'section_bg_image' );
         <section class="check_all_features da-modal" data-name="kodjin_white_paper">
             <div class="container">
                 <div class="row">
-                    <div class="image">
-                        <img data-aos="fade-left"
-                             data-aos-easing="ease"
-                             data-aos-duration="1000"
-                             data-aos-delay="200" src="<?php echo get_home_url(); ?>/wp-content/uploads/2023/07/fhir_img_articles.png" alt="fhir_img_articles" />
-                    </div>
+                    <?php $image_know_more_sec = get_field( 'image_know_more_sec' ); ?>
+                    <?php if ( $image_know_more_sec ) : ?>
+                        <div class="image">
+                            <img data-aos="fade-left"
+                                 data-aos-easing="ease"
+                                 data-aos-duration="1000"
+                                 data-aos-delay="200" src="<?php echo esc_url( $image_know_more_sec['url'] ); ?>" alt="<?php echo esc_attr( $image_know_more_sec['alt'] ); ?>" />
+                        </div>
+                    <?php endif; ?>
+
                     <div class="block" data-aos="fade-up"
                          data-aos-easing="ease"
                          data-aos-duration="1000"
