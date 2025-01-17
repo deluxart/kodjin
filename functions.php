@@ -671,7 +671,7 @@ add_filter('pre_get_document_title', 'add_page_number_to_document_title');
 add_filter('use_block_editor_for_post', 'enable_gutenberg_for_ids_and_templates', 10, 2);
 
 function enable_gutenberg_for_ids_and_templates($use_block_editor, $post) {
-    $specific_page_ids = [48273, 12345, 67890];
+    $specific_page_ids = [48273, 12345, 67890, 50311];
 
     $specific_templates = ['custom-template.php', 'another-template.php'];
 
