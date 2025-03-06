@@ -251,6 +251,7 @@ ul.petal li:before {
 .breadcrumb > div {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 6px;
 }
 .breadcrumb > div .separator {
@@ -733,6 +734,10 @@ ul.petal li:before {
   left: 12px;
   border-radius: 50%;
   background: #000;
+}
+
+.other_whitepapers_slider {
+  position: relative;
 }
 
 .btn {
@@ -3071,6 +3076,12 @@ h5 {
     margin-bottom: 16px;
   }
 }
+@media (max-width: 400px) {
+  .type-post .entry-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+}
 .type-post .entry-header .date {
   font-size: 12px;
   opacity: 0.6;
@@ -3121,6 +3132,11 @@ h5 {
   grid-template-columns: auto 1fr;
   gap: 24px;
 }
+@media (max-width: 992px) {
+  .type-post .post_wrap .sidebar .author {
+    display: none;
+  }
+}
 .type-post .post_wrap .sidebar .author h4 {
   font-size: 18px;
   font-weight: 600;
@@ -3145,6 +3161,11 @@ h5 {
   gap: 24px;
   position: sticky;
   top: 100px;
+}
+@media (max-width: 460px) {
+  .type-post .post_wrap .sidebar .whitepaper {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 .type-post .post_wrap .sidebar .whitepaper a {
   text-decoration: none;
@@ -4234,6 +4255,9 @@ h5 {
 }
 #solution_page.service .blog_section .other_whitepapers .card .tags li {
   background: #F0F0F0;
+}
+#solution_page.service .blog_section .other_whitepapers_slider {
+  position: relative;
 }
 #solution_page.service .blog_section .other_whitepapers_slider .card .image.icon {
   width: 204px;
@@ -5396,6 +5420,12 @@ h5 {
   .other_whitepapers .card {
     padding: 30px;
     grid-template-columns: 120px 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .other_whitepapers .card {
+    padding: 30px;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 .other_whitepapers .card a {

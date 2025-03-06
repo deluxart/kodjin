@@ -37,13 +37,15 @@ get_header();
                 <div class="webinars">
                     <?php while ( $the_query->have_posts() ) : $i++; $the_query->the_post();
                         $webinars = get_the_terms( get_the_ID(), 'webinarcat' );
+                        $video_id = get_field('youtube_video_id');
+                        $thumbnail_url = $video_id ? 'https://img.youtube.com/vi/' . $video_id . '/maxresdefault.jpg' : '';
                         ?>
                         <div data-aos="fade-up"
                              data-aos-easing="ease"
                              data-aos-duration="1000"
                              data-aos-delay="<?php echo $i; ?>00" class="webinar">
                             <a href="<?php the_permalink() ?>">
-                                <div class="wallpaper" <?php if (get_field( 'youtube_video_id' )) { ?>style="background-image: url('https://img.youtube.com/vi/<?php the_field( 'youtube_video_id' ); ?>/hqdefault.jpg')"<?php } ?>>
+                                <div class="wallpaper" style="background-image: url('<?php echo esc_url($thumbnail_url); ?>')">
                                     <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="21" cy="21" r="21" fill="black"/>
                                         <path d="M26 21L20.4315 26.5685V21V15.4315L26 21Z" fill="white"/>
@@ -54,16 +56,14 @@ get_header();
                             <?php if( has_term('', 'webinarcat') ){
                                 echo '<ul class="tags">';
                                 foreach ( $webinars as $webinar ) {
-                                    $children = $webinar->name;
-                                    echo '<li><span>';
-                                    echo $children;
-                                    echo '</span></li>';
+                                    echo '<li><span>' . esc_html($webinar->name) . '</span></li>';
                                 }
                                 echo '</ul>';
                             } ?>
                         </div>
                     <?php endwhile; wp_reset_postdata(); ?>
                 </div>
+
             <?php } ?>
 
             <section class="check_all_features">

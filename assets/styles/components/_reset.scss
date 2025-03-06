@@ -285,6 +285,7 @@ ul {
   > div {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 6px;
 
     .separator {
@@ -873,4 +874,8 @@ ul {
       }
     }
   }
+}
+
+.other_whitepapers_slider {
+  position: relative;
 }
