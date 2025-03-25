@@ -172,7 +172,7 @@ add_action( 'widgets_init', 'kodjin_widgets_init' );
  */
 function kodjin_scripts() {
 	wp_enqueue_style( 'kodjin-style', get_stylesheet_uri(), array(), _S_VERSION );
-    wp_enqueue_style( 'kodjin-styles', get_template_directory_uri() . '/assets/styles/styles.css?1113234343444443444', array(), '1113423434443444' );
+    wp_enqueue_style( 'kodjin-styles', get_template_directory_uri() . '/assets/styles/styles.css?11132343434444434444', array(), '11134234344434444' );
     wp_enqueue_style( 'kodjin-swiper', get_template_directory_uri() . '/assets/styles/libs/swiper.min.css', array(), _S_VERSION );
     wp_enqueue_style( 'kodjin-liMarquee', get_template_directory_uri() . '/assets/styles/libs/liMarquee.css', array(), _S_VERSION );
     wp_enqueue_style( 'kodjin-aos', get_template_directory_uri() . '/assets/styles/libs/aos.css', array(), _S_VERSION );
@@ -671,7 +671,7 @@ add_filter('pre_get_document_title', 'add_page_number_to_document_title');
 add_filter('use_block_editor_for_post', 'enable_gutenberg_for_ids_and_templates', 10, 2);
 
 function enable_gutenberg_for_ids_and_templates($use_block_editor, $post) {
-    $specific_page_ids = [48273, 12345, 67890, 50311];
+    $specific_page_ids = [48273, 12345, 67890, 50311, 54282];
 
     $specific_templates = ['custom-template.php', 'another-template.php'];
 
